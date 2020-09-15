@@ -11,26 +11,41 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ECMyTabBarController()
+        window?.makeKeyAndVisible()
+        
+        
+        //获取app信息
+        let infoDictionary : Dictionary = Bundle.main.infoDictionary!
+        //获取当前版本号
+        let app_Version = infoDictionary["CFBundleShortVersionString"] as! String
+        
+        //2.定义可变：用var修饰
+        var muDic = Dictionary<String,Any>()
+        
+//        muDic["appVersion"] = ["name":"iOS","version":app_Version]
+//        muDic["string"] = ""
+//        muDic["osVersion"] = ["name":UIDevice.current.name,"version":UIDevice.current.systemVersion]
+//        muDic["screenHeight"] = SCREEN_HEIGHT
+//        muDic["screenWidth"] = SCREEN_WIDTH
+
+        NetworkTool.makePostRequest(urlPath: news_channel_listUrl, parameters: muDic, successHandler: { (json) in
+            print(json)
+        }, errorMsgHandler: { (str) in
+            print(str)
+        }) { (error) in
+            print(error)
+        }
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
 
 
 }
