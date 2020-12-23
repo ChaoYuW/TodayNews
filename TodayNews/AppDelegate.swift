@@ -36,13 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        muDic["screenHeight"] = SCREEN_HEIGHT
 //        muDic["screenWidth"] = SCREEN_WIDTH
 
-        NetworkTool.makePostRequest(urlPath: news_channel_listUrl, parameters: muDic, successHandler: { (json) in
-            print(json)
-        }, errorMsgHandler: { (str) in
-            print(str)
-        }) { (error) in
-            print(error)
-        }
+        
         return true
     }
 

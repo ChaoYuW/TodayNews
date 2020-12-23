@@ -17,7 +17,7 @@
 		E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564414C250A2BDD0016B464 /* LivingViewController.swift */; };
 		E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564414E250A2BF30016B464 /* InformationViewController.swift */; };
 		E5644151250A2C040016B464 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5644150250A2C040016B464 /* VideoViewController.swift */; };
-		E5674B6F250A65F500087C6C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5674B6E250A65F500087C6C /* NetworkTool.swift */; };
+		E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5674B6E250A65F500087C6C /* HttpRequest.swift */; };
 		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
 		E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */; };
 		E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41886250B557F0024C6D1 /* MacroDefine.swift */; };
@@ -39,7 +39,7 @@
 		E564414C250A2BDD0016B464 /* LivingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingViewController.swift; sourceTree = "<group>"; };
 		E564414E250A2BF30016B464 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		E5644150250A2C040016B464 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		E5674B6E250A65F500087C6C /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		E5674B6E250A65F500087C6C /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
 		E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDInterfaceDef.swift; sourceTree = "<group>"; };
 		E5F41886250B557F0024C6D1 /* MacroDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
@@ -139,8 +139,8 @@
 		E5644135250A28F90016B464 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E5644138250A29190016B464 /* model */,
-				E5644137250A290E0016B464 /* view */,
+				E5F22436259344030084DD69 /* view */,
+				E5F22435259343FC0084DD69 /* model */,
 				E5644136250A29020016B464 /* controller */,
 			);
 			path = Home;
@@ -153,20 +153,6 @@
 				E5F41888250B628E0024C6D1 /* InformationTableViewController.swift */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		E5644137250A290E0016B464 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		E5644138250A29190016B464 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		E564413F250A2A180016B464 /* Living */ = {
@@ -261,9 +247,23 @@
 		E5F224142593180F0084DD69 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E5674B6E250A65F500087C6C /* NetworkTool.swift */,
+				E5674B6E250A65F500087C6C /* HttpRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E5F22435259343FC0084DD69 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E5F22436259344030084DD69 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		E5F41883250A7F0E0024C6D1 /* Other */ = {
@@ -393,7 +393,7 @@
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
 				E564411D250A213B0016B464 /* AppDelegate.swift in Sources */,
 				E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */,
-				E5674B6F250A65F500087C6C /* NetworkTool.swift in Sources */,
+				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
 				E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */,
 				E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */,
 				E5644134250A27910016B464 /* ECMyTabBarController.swift in Sources */,

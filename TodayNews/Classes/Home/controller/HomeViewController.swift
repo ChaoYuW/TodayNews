@@ -42,12 +42,21 @@ class HomeViewController: UIViewController {
         view.addSubview(categoryTitleView)
         view.addSubview(listContainerView)
         
+        loadData();
+        
     }
     override func viewDidLayoutSubviews() {
         categoryTitleView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: CGFloat(MENU_HEIGHT))
         
         listContainerView.frame = CGRect(x: 0, y:categoryTitleView.frame.maxY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-categoryTitleView.frame.maxY-TABBAR_HEIGHT)
         
+    }
+    
+    func loadData() {
+
+        HttpRequest.request(methodType: .POST, urlString: news_channel_listUrl, param: nil) { (retult) in
+            
+        };
     }
     
     func getRandomTitles() -> [String] {
