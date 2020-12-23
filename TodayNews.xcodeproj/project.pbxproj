@@ -18,6 +18,7 @@
 		E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564414E250A2BF30016B464 /* InformationViewController.swift */; };
 		E5644151250A2C040016B464 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5644150250A2C040016B464 /* VideoViewController.swift */; };
 		E5674B6F250A65F500087C6C /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5674B6E250A65F500087C6C /* NetworkTool.swift */; };
+		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
 		E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */; };
 		E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41886250B557F0024C6D1 /* MacroDefine.swift */; };
 		E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41888250B628E0024C6D1 /* InformationTableViewController.swift */; };
@@ -39,6 +40,7 @@
 		E564414E250A2BF30016B464 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		E5644150250A2C040016B464 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		E5674B6E250A65F500087C6C /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
 		E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDInterfaceDef.swift; sourceTree = "<group>"; };
 		E5F41886250B557F0024C6D1 /* MacroDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
 		E5F41888250B628E0024C6D1 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
@@ -118,8 +120,8 @@
 		E5644131250A27350016B464 /* Mian */ = {
 			isa = PBXGroup;
 			children = (
-				E5F41883250A7F0E0024C6D1 /* Other */,
 				E5674B6D250A659A00087C6C /* Tools */,
+				E5F41883250A7F0E0024C6D1 /* Other */,
 				E5644132250A273C0016B464 /* Controller */,
 			);
 			path = Mian;
@@ -242,9 +244,26 @@
 		E5674B6D250A659A00087C6C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				E5674B6E250A65F500087C6C /* NetworkTool.swift */,
+				E5F224142593180F0084DD69 /* Network */,
+				E5F22410259317A30084DD69 /* Extension */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		E5F22410259317A30084DD69 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E5F224142593180F0084DD69 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5674B6E250A65F500087C6C /* NetworkTool.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E5F41883250A7F0E0024C6D1 /* Other */ = {
@@ -381,6 +400,7 @@
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
+				E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

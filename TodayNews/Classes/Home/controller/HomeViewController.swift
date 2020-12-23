@@ -44,9 +44,9 @@ class HomeViewController: UIViewController {
         
     }
     override func viewDidLayoutSubviews() {
-        categoryTitleView.frame = CGRect(x: 0, y: W_NAVBARHEIGHT, width: SCREEN_WIDTH, height: CGFloat(CATEGORY_HEIGHT))
+        categoryTitleView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: CGFloat(MENU_HEIGHT))
         
-        listContainerView.frame = CGRect(x: 0, y:categoryTitleView.frame.maxY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-categoryTitleView.frame.maxY-W_TABBARHEIGHT)
+        listContainerView.frame = CGRect(x: 0, y:categoryTitleView.frame.maxY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-categoryTitleView.frame.maxY-TABBAR_HEIGHT)
         
     }
     

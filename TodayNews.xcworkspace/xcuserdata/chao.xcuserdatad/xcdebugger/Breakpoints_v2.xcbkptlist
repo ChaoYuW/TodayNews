@@ -68,14 +68,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "46B0A8C0-22A1-4222-83EB-60DFF8A7BDA3 - 77c4e341aa83c2ba"
+                  uuid = "46B0A8C0-22A1-4222-83EB-60DFF8A7BDA3 - c3f656ff348b343d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "TodayNews.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
                   moduleName = "TodayNews"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chao/Desktop/%E6%96%B0%E9%A1%B9%E7%9B%AE/Swift/TodayNews/TodayNews/AppDelegate.swift"
+                  urlString = "file:///Users/chao/Desktop/%E6%96%B0%E9%A1%B9%E7%9B%AE/github/TodayNews/TodayNews/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -83,14 +83,14 @@
                   offsetFromSymbolStart = "1636">
                </Location>
                <Location
-                  uuid = "46B0A8C0-22A1-4222-83EB-60DFF8A7BDA3 - 29ef1c6d5f2e4df2"
+                  uuid = "46B0A8C0-22A1-4222-83EB-60DFF8A7BDA3 - 9ddda9d3c126bb54"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in TodayNews.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
                   moduleName = "TodayNews"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chao/Desktop/%E6%96%B0%E9%A1%B9%E7%9B%AE/Swift/TodayNews/TodayNews/AppDelegate.swift"
+                  urlString = "file:///Users/chao/Desktop/%E6%96%B0%E9%A1%B9%E7%9B%AE/github/TodayNews/TodayNews/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"

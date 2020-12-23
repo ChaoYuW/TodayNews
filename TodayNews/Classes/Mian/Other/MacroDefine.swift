@@ -8,22 +8,19 @@
 
 import UIKit
 
+
 // 屏幕的宽
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 // 屏幕的高
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
-//状态栏高度
-let STATUSBAR_HEIGHT = UIApplication.shared.statusBarFrame.height
-//导航栏高度:通用
-let NAVIGATIONBAR_HEIGHT = UINavigationController().navigationBar.frame.size.height
 
-let CATEGORY_HEIGHT = 50.0
+let MENU_HEIGHT = 50.0
 
 //判断是否iphoneX
-let W_IPHONEX = (CGFloat(SCREEN_WIDTH) == CGFloat(375.0) && CGFloat(SCREEN_HEIGHT) == CGFloat(812.0)) ? true : false
-let W_NAVBARHEIGHT = W_IPHONEX ? CGFloat(88.0) : CGFloat(64.0)
-let W_TABBARHEIGHT = W_IPHONEX ? CGFloat(49.0+34.0) : CGFloat(49.0)
-let W_STATUSBARHEIGHT = W_IPHONEX ? CGFloat(44.0) : CGFloat(20.0)
+let IS_IPHONEX = UIDevice.current.isIphoneX()
+let NAVBAR_HEIGHT = IS_IPHONEX ? CGFloat(88.0) : CGFloat(64.0)
+let TABBAR_HEIGHT = IS_IPHONEX ? CGFloat(49.0+34.0) : CGFloat(49.0)
+let STATUSBAR_HEIGHT = IS_IPHONEX ? CGFloat(44.0) : CGFloat(20.0)
 
 
 // 颜色
