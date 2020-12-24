@@ -19,6 +19,14 @@
 		E5644151250A2C040016B464 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5644150250A2C040016B464 /* VideoViewController.swift */; };
 		E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5674B6E250A65F500087C6C /* HttpRequest.swift */; };
 		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
+		E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22446259431BA0084DD69 /* YDBaseModel.swift */; };
+		E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F224492594327F0084DD69 /* YDChannelModel.swift */; };
+		E5F2244D259433AB0084DD69 /* YDResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2244C259433AB0084DD69 /* YDResourceModel.swift */; };
+		E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2244F259433FC0084DD69 /* YDImageModel.swift */; };
+		E5F224532594347B0084DD69 /* YDPosterCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F224522594347B0084DD69 /* YDPosterCountModel.swift */; };
+		E5F2246825948D250084DD69 /* YDContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2246725948D250084DD69 /* YDContentModel.swift */; };
+		E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2246A25948EBC0084DD69 /* YDCountModel.swift */; };
+		E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2246D25948FDE0084DD69 /* YDMultipleModel.swift */; };
 		E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */; };
 		E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41886250B557F0024C6D1 /* MacroDefine.swift */; };
 		E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41888250B628E0024C6D1 /* InformationTableViewController.swift */; };
@@ -41,6 +49,14 @@
 		E5644150250A2C040016B464 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		E5674B6E250A65F500087C6C /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
+		E5F22446259431BA0084DD69 /* YDBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseModel.swift; sourceTree = "<group>"; };
+		E5F224492594327F0084DD69 /* YDChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDChannelModel.swift; sourceTree = "<group>"; };
+		E5F2244C259433AB0084DD69 /* YDResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDResourceModel.swift; sourceTree = "<group>"; };
+		E5F2244F259433FC0084DD69 /* YDImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDImageModel.swift; sourceTree = "<group>"; };
+		E5F224522594347B0084DD69 /* YDPosterCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDPosterCountModel.swift; sourceTree = "<group>"; };
+		E5F2246725948D250084DD69 /* YDContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDContentModel.swift; sourceTree = "<group>"; };
+		E5F2246A25948EBC0084DD69 /* YDCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDCountModel.swift; sourceTree = "<group>"; };
+		E5F2246D25948FDE0084DD69 /* YDMultipleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDMultipleModel.swift; sourceTree = "<group>"; };
 		E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDInterfaceDef.swift; sourceTree = "<group>"; };
 		E5F41886250B557F0024C6D1 /* MacroDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
 		E5F41888250B628E0024C6D1 /* InformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +246,7 @@
 		E5674B6D250A659A00087C6C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E5F22440259431570084DD69 /* Model */,
 				E5F224142593180F0084DD69 /* Network */,
 				E5F22410259317A30084DD69 /* Extension */,
 			);
@@ -255,6 +272,7 @@
 		E5F22435259343FC0084DD69 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E5F2246725948D250084DD69 /* YDContentModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -264,6 +282,20 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E5F22440259431570084DD69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5F22446259431BA0084DD69 /* YDBaseModel.swift */,
+				E5F224522594347B0084DD69 /* YDPosterCountModel.swift */,
+				E5F2244C259433AB0084DD69 /* YDResourceModel.swift */,
+				E5F2244F259433FC0084DD69 /* YDImageModel.swift */,
+				E5F224492594327F0084DD69 /* YDChannelModel.swift */,
+				E5F2246A25948EBC0084DD69 /* YDCountModel.swift */,
+				E5F2246D25948FDE0084DD69 /* YDMultipleModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E5F41883250A7F0E0024C6D1 /* Other */ = {
@@ -389,17 +421,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F2244D259433AB0084DD69 /* YDResourceModel.swift in Sources */,
 				E5644149250A2ABE0016B464 /* ECMyNavigationController.swift in Sources */,
+				E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */,
+				E5F2246825948D250084DD69 /* YDContentModel.swift in Sources */,
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
 				E564411D250A213B0016B464 /* AppDelegate.swift in Sources */,
 				E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */,
+				E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */,
+				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
 				E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */,
 				E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */,
+				E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */,
 				E5644134250A27910016B464 /* ECMyTabBarController.swift in Sources */,
+				E5F224532594347B0084DD69 /* YDPosterCountModel.swift in Sources */,
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
+				E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */,
 				E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

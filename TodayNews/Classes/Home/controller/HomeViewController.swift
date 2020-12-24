@@ -8,10 +8,12 @@
 
 import UIKit
 import JXSegmentedView
+import HandyJSON
 
 class HomeViewController: UIViewController {
 
     private var segmentedDataSource: JXSegmentedTitleDataSource!
+    private var menuList = [YDChannelModel]()
     
     
     lazy private var categoryTitleView: JXSegmentedView = {
@@ -20,7 +22,6 @@ class HomeViewController: UIViewController {
         //2、配置数据源
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
         segmentedDataSource = JXSegmentedTitleDataSource()
-        segmentedDataSource.titles = getRandomTitles()
         segmentedDataSource.isTitleColorGradientEnabled = true
         segmentView.dataSource = segmentedDataSource
         
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
         view.addSubview(categoryTitleView)
         view.addSubview(listContainerView)
         
-        loadData();
+        requestMenuData();
         
     }
     override func viewDidLayoutSubviews() {
@@ -52,24 +53,55 @@ class HomeViewController: UIViewController {
         
     }
     
-    func loadData() {
-
+    func requestMenuData() {
         HttpRequest.request(methodType: .POST, urlString: news_channel_listUrl, param: nil) { (retult) in
+            
+            let list = retult["data"] as! Array<Any>
+            var titles = [String]()
+            
+            if self.menuList.count > 0
+            {
+                self.menuList.removeAll()
+            }
+            
+            for i in 0 ..< list.count{
+                let dict = list[i];
+                let model = JSONDeserializer<YDChannelModel>.deserializeFrom(dict: dict as? [String:Any])
+                self.menuList.append(model!)
+                titles.append(model?.title ?? "")
+            }
+            self.segmentedDataSource.titles = titles
+            self.categoryTitleView.dataSource =  self.segmentedDataSource
+            var page = 0
+            if titles.count > 1{
+                self.categoryTitleView.defaultSelectedIndex = 1
+                page = 1
+            }
+            self.categoryTitleView.reloadData()
+            self.listContainerView.reloadData()
+    
+            guard self.menuList.count > page  else {
+                return
+            }
+            let menu1 = self.menuList[page]
+            
+            self.requestListPageIndex(pageIndex: 1)
             
         };
     }
     
-    func getRandomTitles() -> [String] {
-        let titles = ["猴哥", "青蛙王子", "旺财", "粉红猪", "喜羊羊", "黄焖鸡", "小马哥", "牛魔王", "大象先生", "神龙"]
-        let randomCount = Int(arc4random()%7 + 4)
-        var tempTitles = titles
-        var resultTitles = [String]()
-        for _ in 0..<randomCount {
-            let randomIndex = Int(arc4random()%UInt32(tempTitles.count))
-            resultTitles.append(tempTitles[randomIndex])
-            tempTitles.remove(at: randomIndex)
+    func requestListPageIndex(pageIndex : Int) {
+        let channel = self.menuList[self.categoryTitleView.selectedIndex]
+        
+        var param = [String : Any]()
+        
+        param["channel"] = ["id":channel.id]
+        param["pageNo"] = pageIndex
+        param["pageSize"] = 10
+        
+        HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
+            
         }
-        return resultTitles;
     }
 
 }

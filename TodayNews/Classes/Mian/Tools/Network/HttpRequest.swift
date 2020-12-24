@@ -23,7 +23,12 @@ enum MethodType {
 
 class HttpRequest: NSObject {
     
-    class func request(methodType:MethodType, urlString:String,param:[String:Any]?,success:@escaping SuccessBlock) {
+    static let shared:HttpRequest = {
+        let share = HttpRequest()
+        return share
+    }()
+    
+    class func request(methodType:MethodType, urlString:String,param:[String:Any]? = nil,success:@escaping SuccessBlock) {
         
         let headers: HTTPHeaders = [
            //......
