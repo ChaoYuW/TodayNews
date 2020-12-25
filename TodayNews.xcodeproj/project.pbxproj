@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8D0BC63A0222142799448249 /* Pods_TodayNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF4E4B4446E1131BDFFBF07 /* Pods_TodayNews.framework */; };
+		E55A3A6525957E1A00B312F3 /* YDLeftImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */; };
+		E55A3A6625957E1A00B312F3 /* YDLeftImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */; };
+		E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */; };
+		E55A3A6C2595C17800B312F3 /* YDReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A6B2595C17800B312F3 /* YDReqModel.swift */; };
+		E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */; };
 		E564411D250A213B0016B464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564411C250A213B0016B464 /* AppDelegate.swift */; };
 		E5644126250A213D0016B464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5644125250A213D0016B464 /* Assets.xcassets */; };
 		E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5644127250A213D0016B464 /* LaunchScreen.storyboard */; };
@@ -36,6 +41,11 @@
 		46C49A60B138ADF331E1BB46 /* Pods-TodayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.release.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.release.xcconfig"; sourceTree = "<group>"; };
 		9A8C2F22EC64078A2EA0E74A /* Pods-TodayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.debug.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BBF4E4B4446E1131BDFFBF07 /* Pods_TodayNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDLeftImageTableViewCell.swift; sourceTree = "<group>"; };
+		E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YDLeftImageTableViewCell.xib; sourceTree = "<group>"; };
+		E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseTableViewController.swift; sourceTree = "<group>"; };
+		E55A3A6B2595C17800B312F3 /* YDReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDReqModel.swift; sourceTree = "<group>"; };
+		E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutConstraint+ECDesignable.swift"; sourceTree = "<group>"; };
 		E5644119250A213B0016B464 /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E564411C250A213B0016B464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5644125250A213D0016B464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 			children = (
 				E5644133250A27910016B464 /* ECMyTabBarController.swift */,
 				E5644148250A2ABE0016B464 /* ECMyNavigationController.swift */,
+				E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */,
+				E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -273,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				E5F2246725948D250084DD69 /* YDContentModel.swift */,
+				E55A3A6B2595C17800B312F3 /* YDReqModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -280,6 +293,8 @@
 		E5F22436259344030084DD69 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */,
+				E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -368,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */,
+				E55A3A6625957E1A00B312F3 /* YDLeftImageTableViewCell.xib in Resources */,
 				E5644126250A213D0016B464 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,16 +442,20 @@
 				E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */,
 				E5F2246825948D250084DD69 /* YDContentModel.swift in Sources */,
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
+				E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */,
 				E564411D250A213B0016B464 /* AppDelegate.swift in Sources */,
 				E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */,
+				E55A3A6C2595C17800B312F3 /* YDReqModel.swift in Sources */,
 				E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
+				E55A3A6525957E1A00B312F3 /* YDLeftImageTableViewCell.swift in Sources */,
 				E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */,
 				E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */,
 				E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */,
 				E5644134250A27910016B464 /* ECMyTabBarController.swift in Sources */,
 				E5F224532594347B0084DD69 /* YDPosterCountModel.swift in Sources */,
+				E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */,
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,

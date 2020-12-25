@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
 
     private var segmentedDataSource: JXSegmentedTitleDataSource!
     private var menuList = [YDChannelModel]()
+    private var tempVc = InformationTableViewController()
+    
     
     
     lazy private var categoryTitleView: JXSegmentedView = {
@@ -24,6 +26,7 @@ class HomeViewController: UIViewController {
         segmentedDataSource = JXSegmentedTitleDataSource()
         segmentedDataSource.isTitleColorGradientEnabled = true
         segmentView.dataSource = segmentedDataSource
+        segmentView.delegate = self
         
         //3、配置指示器
         let indicator = JXSegmentedIndicatorLineView()
@@ -83,9 +86,9 @@ class HomeViewController: UIViewController {
             guard self.menuList.count > page  else {
                 return
             }
-            let menu1 = self.menuList[page]
-            
-            self.requestListPageIndex(pageIndex: 1)
+//            let menu1 = self.menuList[page]
+//            
+//            self.requestListPageIndex(pageIndex: 1)
             
         };
     }
@@ -93,19 +96,54 @@ class HomeViewController: UIViewController {
     func requestListPageIndex(pageIndex : Int) {
         let channel = self.menuList[self.categoryTitleView.selectedIndex]
         
+        
         var param = [String : Any]()
         
         param["channel"] = ["id":channel.id]
         param["pageNo"] = pageIndex
         param["pageSize"] = 10
         
+        
+//        list.reqParam
+        var list = tempVc
+        
+        
         HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
             
+            guard let resultDict = result as? [String :Any] else {return}
+            guard let dataDict = resultDict["data"] as? [String :Any] else {return}
+            guard let dataAry = dataDict["records"] as? Array<Any> else{return}
+            
+            for dict in dataAry {
+                let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any])
+                list.dataMuAry.append(model ?? YDContentModel())
+            }
+            list.reloadData()
         }
     }
 
+//    func getCurrentController(page : Int) -> InformationTableViewController {
+//
+//        let keys = Array(self.listContainerView.validListDict.keys)
+//
+//        if keys.contains(Int) {
+//
+//        }
+//        ret
+//
+//        let list = self.listContainerView.validListDict[self.categoryTitleView.selectedIndex] as? InformationTableViewController
+//    }
 }
 
+extension HomeViewController : JXSegmentedViewDelegate
+{
+    func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
+        self.listContainerView.didClickSelectedItem(at: index)
+    }
+    func segmentedView(_ segmentedView: JXSegmentedView, didScrollSelectedItemAt index: Int) {
+        self.listContainerView.didClickSelectedItem(at: index)
+    }
+}
 extension HomeViewController : JXSegmentedListContainerViewDataSource
 {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
@@ -115,7 +153,10 @@ extension HomeViewController : JXSegmentedListContainerViewDataSource
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         
         let vc = InformationTableViewController()
-        vc.tableView.backgroundColor = main_bg_color
+        
+        tempVc = vc
+        vc.reqParam = YDReqModel();
+        requestListPageIndex(pageIndex: 1)
         return vc
     }
     

@@ -25,7 +25,7 @@ class YDContentModel: YDBaseModel {
     var topLevel : Int = 0
     var liveStatus : String = ""
     var count = YDCountModel()
-    var displayResources = Array<YDMultipleModel>?.self
+    var displayResources : [YDMultipleModel] = [YDMultipleModel] ()
     
     
     
