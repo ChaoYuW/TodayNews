@@ -102,11 +102,9 @@ class HomeViewController: UIViewController {
         param["channel"] = ["id":channel.id]
         param["pageNo"] = pageIndex
         param["pageSize"] = 10
-        
-        
+
 //        list.reqParam
-        var list = tempVc
-        
+        let list = tempVc
         
         HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
             
