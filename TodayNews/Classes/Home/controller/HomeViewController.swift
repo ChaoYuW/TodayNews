@@ -69,54 +69,66 @@ class HomeViewController: UIViewController {
             
             for i in 0 ..< list.count{
                 let dict = list[i];
-                let model = JSONDeserializer<YDChannelModel>.deserializeFrom(dict: dict as? [String:Any])
-                self.menuList.append(model!)
-                titles.append(model?.title ?? "")
+                if let model = JSONDeserializer<YDChannelModel>.deserializeFrom(dict: dict as? [String:Any]) {
+                    self.menuList.append(model)
+                    titles.append(model.title)
+                }
             }
             self.segmentedDataSource.titles = titles
             self.categoryTitleView.dataSource =  self.segmentedDataSource
             var page = 0
             if titles.count > 1{
-                self.categoryTitleView.defaultSelectedIndex = 1
                 page = 1
             }
+            self.categoryTitleView.defaultSelectedIndex = page
+            self.listContainerView.defaultSelectedIndex = page
             self.categoryTitleView.reloadData()
             self.listContainerView.reloadData()
     
-            guard self.menuList.count > page  else {
-                return
-            }
+//            guard self.menuList.count > page  else {
+//                return
+//            }
 //            let menu1 = self.menuList[page]
 //            
 //            self.requestListPageIndex(pageIndex: 1)
-            
         };
     }
     
     func requestListPageIndex(pageIndex : Int) {
-        let channel = self.menuList[self.categoryTitleView.selectedIndex]
         
+        let selectIndex = self.categoryTitleView.selectedIndex
+        let channel = self.menuList[selectIndex]
+        let list : Optional<InformationTableViewController>
+//        list.reqParam
+        let keys = self.listContainerView.validListDict.keys
+        
+        if keys.contains(selectIndex) {
+            list = self.listContainerView.validListDict[selectIndex] as? InformationTableViewController
+        }else {
+            list = tempVc
+        }
         
         var param = [String : Any]()
         
         param["channel"] = ["id":channel.id]
         param["pageNo"] = pageIndex
         param["pageSize"] = 10
-
-//        list.reqParam
-        let list = tempVc
+        
+        
+        print("选中 \(selectIndex) \(param) \(String(describing: list))")
         
         HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
             
-            guard let resultDict = result as? [String :Any] else {return}
-            guard let dataDict = resultDict["data"] as? [String :Any] else {return}
+            guard let dataDict = result["data"] as? [String :Any] else {return}
             guard let dataAry = dataDict["records"] as? Array<Any> else{return}
             
             for dict in dataAry {
-                let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any])
-                list.dataMuAry.append(model ?? YDContentModel())
+                if let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any]) {
+                    list?.dataMuAry.append(model)
+                }
+                
             }
-            list.reloadData()
+            list?.reloadData()
         }
     }
 
@@ -155,6 +167,7 @@ extension HomeViewController : JXSegmentedListContainerViewDataSource
         tempVc = vc
         vc.reqParam = YDReqModel();
         requestListPageIndex(pageIndex: 1)
+        print("创建 /(index)")
         return vc
     }
     

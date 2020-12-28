@@ -604,6 +604,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A8C2F22EC64078A2EA0E74A /* Pods-TodayNews.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JEAGCUN8WT;

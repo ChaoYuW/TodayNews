@@ -13,7 +13,7 @@ class InformationTableViewController: UIViewController,UITableViewDelegate,UITab
     
     
 
-    var dataMuAry = [Any]()
+    var dataMuAry = [YDContentModel]()
     var reqParam = YDReqModel()
     
 

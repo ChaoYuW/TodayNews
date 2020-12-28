@@ -44,7 +44,7 @@ class HttpRequest: NSObject {
 //                print("request---\(dataResponse.request!)")
 //                print("response---\(String(describing: dataResponse.response))")
 //                print("data---\(String(describing: dataResponse.data))")
-                print("resultValue---\(dataResponse.result)")
+//                print("resultValue---\(dataResponse.result)")
 
                 switch dataResponse.result {
                 
