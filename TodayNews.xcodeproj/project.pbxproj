@@ -13,6 +13,8 @@
 		E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */; };
 		E55A3A6C2595C17800B312F3 /* YDReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A6B2595C17800B312F3 /* YDReqModel.swift */; };
 		E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */; };
+		E55A3A8D25997D9100B312F3 /* YDToolBarForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */; };
+		E55A3B392599AC6300B312F3 /* UIView+ECFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */; };
 		E564411D250A213B0016B464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564411C250A213B0016B464 /* AppDelegate.swift */; };
 		E5644126250A213D0016B464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5644125250A213D0016B464 /* Assets.xcassets */; };
 		E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5644127250A213D0016B464 /* LaunchScreen.storyboard */; };
@@ -46,6 +48,8 @@
 		E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseTableViewController.swift; sourceTree = "<group>"; };
 		E55A3A6B2595C17800B312F3 /* YDReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDReqModel.swift; sourceTree = "<group>"; };
 		E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutConstraint+ECDesignable.swift"; sourceTree = "<group>"; };
+		E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDToolBarForCell.swift; sourceTree = "<group>"; };
+		E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ECFrame.swift"; sourceTree = "<group>"; };
 		E5644119250A213B0016B464 /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E564411C250A213B0016B464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5644125250A213D0016B464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 			children = (
 				E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */,
 				E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */,
+				E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			children = (
 				E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */,
 				E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */,
+				E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -455,9 +461,11 @@
 				E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */,
 				E5644134250A27910016B464 /* ECMyTabBarController.swift in Sources */,
 				E5F224532594347B0084DD69 /* YDPosterCountModel.swift in Sources */,
+				E55A3B392599AC6300B312F3 /* UIView+ECFrame.swift in Sources */,
 				E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */,
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
+				E55A3A8D25997D9100B312F3 /* YDToolBarForCell.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
 				E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */,
 				E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */,

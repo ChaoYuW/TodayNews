@@ -13,6 +13,7 @@ target 'TodayNews' do
   pod 'IBAnimatable'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SnapKit'
   # pod 'SQLite.swift'
   pod 'SQLite.swift', '~> 0.12.0'
   pod 'SVProgressHUD'
