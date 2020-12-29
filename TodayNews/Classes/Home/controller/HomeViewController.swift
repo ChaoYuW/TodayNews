@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
 
     private var segmentedDataSource: JXSegmentedTitleDataSource!
     private var menuList = [YDChannelModel]()
-    private var tempVc = InformationTableViewController()
+    private var tempVc : InformationTableViewController?
     
     
     
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(categoryTitleView)
         view.addSubview(listContainerView)
-        
+        categoryTitleView.listContainer = listContainerView
         requestMenuData();
         
     }
