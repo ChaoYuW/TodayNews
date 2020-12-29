@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     private var segmentedDataSource: JXSegmentedTitleDataSource!
     private var menuList = [YDChannelModel]()
     private var tempVc : InformationTableViewController?
+    private var _selectedIndex : Int = 0
     
     
     
@@ -96,7 +97,7 @@ class HomeViewController: UIViewController {
     
     func requestListPageIndex(pageIndex : Int) {
         
-        let selectIndex = self.categoryTitleView.selectedIndex
+        let selectIndex = _selectedIndex
         let channel = self.menuList[selectIndex]
         let list : Optional<InformationTableViewController>
 //        list.reqParam
@@ -122,6 +123,13 @@ class HomeViewController: UIViewController {
             guard let dataDict = result["data"] as? [String :Any] else {return}
             guard let dataAry = dataDict["records"] as? Array<Any> else{return}
             
+            if dataAry.count < 10 {
+                list?.isNoMoreData = true
+            }else
+            {
+                list?.isNoMoreData = false
+            }
+            
             for dict in dataAry {
                 if let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any]) {
                     list?.dataMuAry.append(model)
@@ -145,12 +153,19 @@ class HomeViewController: UIViewController {
 //    }
 }
 
+extension HomeViewController : LoadDataDelegate{
+    func loadPageIndex(_ pageIndex: NSInteger) {
+        self.requestListPageIndex(pageIndex: pageIndex)
+    }
+}
 extension HomeViewController : JXSegmentedViewDelegate
 {
     func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
+        _selectedIndex = index
         self.listContainerView.didClickSelectedItem(at: index)
     }
     func segmentedView(_ segmentedView: JXSegmentedView, didScrollSelectedItemAt index: Int) {
+        _selectedIndex = index
         self.listContainerView.didClickSelectedItem(at: index)
     }
 }
@@ -162,8 +177,9 @@ extension HomeViewController : JXSegmentedListContainerViewDataSource
     
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         
+        _selectedIndex = index
         let vc = InformationTableViewController()
-        
+        vc.delegate = self
         tempVc = vc
         vc.reqParam = YDReqModel();
         requestListPageIndex(pageIndex: 1)

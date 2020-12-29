@@ -15,6 +15,8 @@
 		E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */; };
 		E55A3A8D25997D9100B312F3 /* YDToolBarForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */; };
 		E55A3B392599AC6300B312F3 /* UIView+ECFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */; };
+		E55A3B96259B014900B312F3 /* UIView+ECExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3B95259B014900B312F3 /* UIView+ECExtension.swift */; };
+		E55A3BB1259B179C00B312F3 /* YDMultiImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3BAF259B179C00B312F3 /* YDMultiImageTableViewCell.swift */; };
 		E564411D250A213B0016B464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564411C250A213B0016B464 /* AppDelegate.swift */; };
 		E5644126250A213D0016B464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5644125250A213D0016B464 /* Assets.xcassets */; };
 		E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5644127250A213D0016B464 /* LaunchScreen.storyboard */; };
@@ -50,6 +52,8 @@
 		E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutConstraint+ECDesignable.swift"; sourceTree = "<group>"; };
 		E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDToolBarForCell.swift; sourceTree = "<group>"; };
 		E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ECFrame.swift"; sourceTree = "<group>"; };
+		E55A3B95259B014900B312F3 /* UIView+ECExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ECExtension.swift"; sourceTree = "<group>"; };
+		E55A3BAF259B179C00B312F3 /* YDMultiImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDMultiImageTableViewCell.swift; sourceTree = "<group>"; };
 		E5644119250A213B0016B464 /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E564411C250A213B0016B464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5644125250A213D0016B464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */,
 				E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */,
 				E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */,
+				E55A3B95259B014900B312F3 /* UIView+ECExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */,
 				E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */,
 				E55A3A8C25997D9100B312F3 /* YDToolBarForCell.swift */,
+				E55A3BAF259B179C00B312F3 /* YDMultiImageTableViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
+				E55A3B96259B014900B312F3 /* UIView+ECExtension.swift in Sources */,
 				E55A3A6525957E1A00B312F3 /* YDLeftImageTableViewCell.swift in Sources */,
 				E5F41889250B628E0024C6D1 /* InformationTableViewController.swift in Sources */,
 				E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */,
@@ -468,6 +475,7 @@
 				E55A3A8D25997D9100B312F3 /* YDToolBarForCell.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
 				E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */,
+				E55A3BB1259B179C00B312F3 /* YDMultiImageTableViewCell.swift in Sources */,
 				E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
