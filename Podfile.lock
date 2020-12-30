@@ -14,7 +14,6 @@ PODS:
   - Kingfisher (5.15.0):
     - Kingfisher/Core (= 5.15.0)
   - Kingfisher/Core (5.15.0)
-  - LookinServer (1.0.0)
   - lottie-ios (3.1.8)
   - MJRefresh (3.5.0)
   - NVActivityIndicatorView (4.7.0):
@@ -38,7 +37,6 @@ DEPENDENCIES:
   - IBAnimatable
   - JXSegmentedView
   - Kingfisher
-  - LookinServer
   - lottie-ios
   - MJRefresh
   - RxCocoa
@@ -56,7 +54,6 @@ SPEC REPOS:
     - IBAnimatable
     - JXSegmentedView
     - Kingfisher
-    - LookinServer
     - lottie-ios
     - MJRefresh
     - NVActivityIndicatorView
@@ -75,7 +72,6 @@ SPEC CHECKSUMS:
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
-  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
@@ -86,6 +82,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: ff1024074d545d72fe5b8cf6fd23a19c0905248e
+PODFILE CHECKSUM: 70c63447e1ea7779a7c5a27b2ce96a7304e305b1
 
 COCOAPODS: 1.10.0
