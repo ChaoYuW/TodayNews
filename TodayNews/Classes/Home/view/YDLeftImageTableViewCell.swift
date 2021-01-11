@@ -14,6 +14,7 @@ class YDLeftImageTableViewCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLab: UILabel!
     
+    @IBOutlet weak var bottomView: YDBottomView!
     private var tempModel : YDContentModel = YDContentModel ()
 
     var model : YDContentModel {

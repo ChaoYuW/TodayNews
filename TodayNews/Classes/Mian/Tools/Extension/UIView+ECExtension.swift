@@ -150,4 +150,8 @@ extension UIView {
         border.frame = CGRect(x: x, y: y, width: width, height: height)
         layer.addSublayer(border)
     }
+    func adaptSize(_ value : CGFloat) -> CGFloat {
+        let screen_w = UIScreen.main.bounds.width
+        return value*(screen_w/414.0)
+    }
 }
