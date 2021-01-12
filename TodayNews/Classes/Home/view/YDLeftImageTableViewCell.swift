@@ -27,7 +27,7 @@ class YDLeftImageTableViewCell: UITableViewCell {
                 let imgModel = tempModel.displayResources.first
                 
                 imgView.kf.setImage(with: URL(string: imgModel?.thumbUrl ?? ""))
-                
+                bottomView.model = newValue
             }
         }
         get {

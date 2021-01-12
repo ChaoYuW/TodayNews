@@ -24,6 +24,6 @@ target 'TodayNews' do
   # pod 'Texture'
   pod 'lottie-ios'
   pod 'JXSegmentedView'
-#  pod 'LookinServer', :configurations => ['Debug']
+  pod 'LookinServer', :configurations => ['Debug']
 
 end

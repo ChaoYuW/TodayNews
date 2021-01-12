@@ -68,6 +68,20 @@ extension UIView {
             subLayer.shadowRadius = shadowRadius
             superview.layer.insertSublayer(subLayer, below: self.layer)
         }
+        func addCornerAndBorder(corners: UIRectCorner , radius: CGFloat,borderWidth: CGFloat, borderColor: UIColor) {
+            
+            let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = self.bounds
+            maskLayer.path = maskPath.cgPath
+//            maskLayer.fillColor = UIColor.clear.cgColor
+            maskLayer.strokeColor = borderColor.cgColor
+            maskLayer.lineWidth = borderWidth
+            layer.mask = maskLayer
+            layer.borderWidth = borderWidth
+            layer.borderColor = borderColor.cgColor
+            layer.masksToBounds = true
+        }
 
         // MARK: 5.4、添加边框
         /// 添加边框
