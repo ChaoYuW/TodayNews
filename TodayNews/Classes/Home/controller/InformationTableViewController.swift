@@ -121,14 +121,51 @@ class InformationTableViewController: UIViewController,UITableViewDelegate,UITab
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataMuAry.count
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let model = dataMuAry[indexPath.row]
+        if model.displayStyle == "multi-image" {
+            return model.cellHeight
+        }
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = YDLeftImageTableViewCell.cellWithTableView(tableView: tableView)
         let model = dataMuAry[indexPath.row]
+        switch model.displayStyle {
+        case "plain-text": //@"plain-text"//:               无图，纯文本
+            let cell = YDLeftImageTableViewCell.cellWithTableView(tableView: tableView)
+            let model = dataMuAry[indexPath.row]
+            
+            cell.model = model
+            return cell
+        case "inline-image": //: 1张小图（放左侧）
+            let cell = YDLeftImageTableViewCell.cellWithTableView(tableView: tableView)
+            let model = dataMuAry[indexPath.row]
+            
+            cell.model = model
+            return cell
+        case "v-image":  //1张竖图
+            let cell = YDLeftImageTableViewCell.cellWithTableView(tableView: tableView)
+            let model = dataMuAry[indexPath.row]
+            
+            cell.model = model
+            return cell
+        case "multi-image":  //多张横图
+            let cell = YDMultiImageTableViewCell.cellWithTableView(tableView: tableView)
+            let model = dataMuAry[indexPath.row]
+            
+            cell.model = model
+            return cell
+            
+        default:
+            let cell = YDLeftImageTableViewCell.cellWithTableView(tableView: tableView)
+            let model = dataMuAry[indexPath.row]
+            
+            cell.model = model
+            return cell
+        }
+        return UITableViewCell()
         
-        cell.model = model
-        return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

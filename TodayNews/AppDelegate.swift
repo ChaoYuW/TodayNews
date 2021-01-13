@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GKNavigationBarSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        GKConfigure.awake()
+        
+        GKConfigure.setupCustom { (configure) in
+            configure.gk_translationX = 15
+            configure.gk_translationY = 20
+            configure.gk_scaleX = 0.90
+            configure.gk_scaleY = 0.92
+            configure.gk_navItemLeftSpace = 12.0
+            configure.gk_navItemRightSpace = 12.0
+            
+            configure.shiledItemSpaceVCs = ["TZ"]
+            configure.shiledItemSpaceVCs = ["TZ"]
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ECMyTabBarController()

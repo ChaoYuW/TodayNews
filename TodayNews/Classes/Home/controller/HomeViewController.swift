@@ -10,50 +10,89 @@ import UIKit
 import JXSegmentedView
 import HandyJSON
 
-class HomeViewController: UIViewController {
+class HomeViewController: YDBaseViewController {
 
     private var segmentedDataSource: JXSegmentedTitleDataSource!
     private var menuList = [YDChannelModel]()
     private var tempVc : InformationTableViewController?
     private var _selectedIndex : Int = 0
     
+    lazy private var topBgImgView : UIImageView = {
+        let imgView = UIImageView(image: UIImage(named: "info_top_bg"))
+        imgView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height:adaptSize(248))
+        
+        return imgView
+    } ()
+    
+    lazy private var searchBtn : UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.frame = CGRect(x: SCREEN_WIDTH - adaptSize(20) - adaptSize(31), y: (44-adaptSize(31))*0.5, width: adaptSize(31), height: adaptSize(31))
+        btn.setImage(UIImage(named: "nav_search_icon"), for: .normal)
+        btn.addTarget(self, action: #selector(searchClick(_:)), for: .touchUpInside)
+        
+        return btn
+    }()
     
     
     lazy private var categoryTitleView: JXSegmentedView = {
         let segmentView = JXSegmentedView()
-        segmentView.backgroundColor = UIColor.white
+        segmentView.frame = CGRect(x: adaptSize(20), y: (44-30)*0.5, width: SCREEN_WIDTH-2*2*adaptSize(20), height: 30)
+//        segmentView.backgroundColor = UIColor.white
         //2、配置数据源
         //segmentedViewDataSource一定要通过属性强持有！！！！！！！！！
         segmentedDataSource = JXSegmentedTitleDataSource()
         segmentedDataSource.isTitleColorGradientEnabled = true
+        segmentedDataSource.titleSelectedColor = UIColor.white
+        segmentedDataSource.titleNormalColor = UIColor.white
         segmentView.dataSource = segmentedDataSource
         segmentView.delegate = self
         
         //3、配置指示器
-        let indicator = JXSegmentedIndicatorLineView()
+        
+        let indicator = JXSegmentedIndicatorBackgroundView()
+        indicator.indicatorHeight = adaptSize(30)
         indicator.indicatorWidth = JXSegmentedViewAutomaticDimension
-        indicator.lineStyle = .lengthen
+//        indicator.indicatorWidthIncrement = 0
+        indicator.indicatorColor = UIColor.COLOR_RGBA(r: 255, g: 255, b: 255, alpha: 0.2)
+        
+//        let indicator = JXSegmentedIndicatorLineView()
+//        indicator.indicatorWidth = JXSegmentedViewAutomaticDimension
+//        indicator.lineStyle = .lengthen
         segmentView.indicators = [indicator]
         
         return segmentView
     }()
     lazy private var listContainerView : JXSegmentedListContainerView! = {
         let listContainerView = JXSegmentedListContainerView(dataSource: self)
+        listContainerView.frame = CGRect(x: 0, y:NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-NAVBAR_HEIGHT-TABBAR_HEIGHT)
         return listContainerView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(categoryTitleView)
+        
+        self.gk_navBarAlpha = 0
+        self.gk_navItemLeftSpace = 0
+        self.gk_navItemRightSpace = 0
+        view.addSubview(topBgImgView)
+        
+        let navView = UIView(frame: CGRect(x: 0, y: NAVBAR_HEIGHT-44, width: SCREEN_WIDTH, height: 44))
+        navView.addSubview(searchBtn)
+        navView.addSubview(categoryTitleView)
+        self.gk_navigationBar.addSubview(navView)
+        
+        
+        
+//        view.addSubview(categoryTitleView)
         view.addSubview(listContainerView)
         categoryTitleView.listContainer = listContainerView
         requestMenuData();
         
     }
     override func viewDidLayoutSubviews() {
-        categoryTitleView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: CGFloat(MENU_HEIGHT))
+//        categoryTitleView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: CGFloat(MENU_HEIGHT))
         
-        listContainerView.frame = CGRect(x: 0, y:categoryTitleView.frame.maxY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-categoryTitleView.frame.maxY-TABBAR_HEIGHT)
+        
         
     }
     
@@ -138,6 +177,10 @@ class HomeViewController: UIViewController {
             }
             list?.reloadData()
         }
+    }
+    
+    @objc func searchClick(_ button :UIButton){
+        
     }
 
 //    func getCurrentController(page : Int) -> InformationTableViewController {

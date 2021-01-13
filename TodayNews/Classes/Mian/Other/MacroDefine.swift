@@ -41,4 +41,8 @@ let deputy_bg_color = COLOR_RGBA(r: 242, g: 242, b: 242, alpha: 1)
 var kFont : (CGFloat) -> UIFont = {size in
     return UIFont.systemFont(ofSize: size)
 }
+func adaptSize(_ value : CGFloat) -> CGFloat {
+    let screen_w = UIScreen.main.bounds.width
+    return value*(screen_w/414.0)
+}
 

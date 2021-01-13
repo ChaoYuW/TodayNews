@@ -30,6 +30,9 @@ class ECMyTabBarController: UITabBarController {
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.selectedImage = UIImage(named: imageName + "selected")
         childController.title = title;
-        addChild(ECMyNavigationController(rootViewController: childController))
+        let nav = UINavigationController(rootVC: childController)
+        nav.gk_openScrollLeftPush = true
+        nav.gk_openSystemNavHandle = true
+        addChild(nav)
     }
 }

@@ -29,6 +29,9 @@
 		E5644151250A2C040016B464 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5644150250A2C040016B464 /* VideoViewController.swift */; };
 		E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5674B6E250A65F500087C6C /* HttpRequest.swift */; };
 		E57142F625AD9F5D000D58B4 /* YDMultilImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57142F525AD9F5D000D58B4 /* YDMultilImageView.swift */; };
+		E57142FD25AED3E6000D58B4 /* YDImageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57142FC25AED3E6000D58B4 /* YDImageContentView.swift */; };
+		E571430025AED3F8000D58B4 /* YDImageContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57142FF25AED3F7000D58B4 /* YDImageContentView.xib */; };
+		E571431B25AEED05000D58B4 /* YDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571431A25AEED05000D58B4 /* YDBaseViewController.swift */; };
 		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
 		E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22446259431BA0084DD69 /* YDBaseModel.swift */; };
 		E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F224492594327F0084DD69 /* YDChannelModel.swift */; };
@@ -70,6 +73,9 @@
 		E5644150250A2C040016B464 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		E5674B6E250A65F500087C6C /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		E57142F525AD9F5D000D58B4 /* YDMultilImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDMultilImageView.swift; sourceTree = "<group>"; };
+		E57142FC25AED3E6000D58B4 /* YDImageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDImageContentView.swift; sourceTree = "<group>"; };
+		E57142FF25AED3F7000D58B4 /* YDImageContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YDImageContentView.xib; sourceTree = "<group>"; };
+		E571431A25AEED05000D58B4 /* YDBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseViewController.swift; sourceTree = "<group>"; };
 		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
 		E5F22446259431BA0084DD69 /* YDBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseModel.swift; sourceTree = "<group>"; };
 		E5F224492594327F0084DD69 /* YDChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDChannelModel.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 				E5644133250A27910016B464 /* ECMyTabBarController.swift */,
 				E5644148250A2ABE0016B464 /* ECMyNavigationController.swift */,
 				E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */,
+				E571431A25AEED05000D58B4 /* YDBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,6 +318,8 @@
 				E55A3A6325957E1A00B312F3 /* YDLeftImageTableViewCell.swift */,
 				E55A3A6425957E1A00B312F3 /* YDLeftImageTableViewCell.xib */,
 				E55A3A8C25997D9100B312F3 /* YDBottomView.swift */,
+				E57142FC25AED3E6000D58B4 /* YDImageContentView.swift */,
+				E57142FF25AED3F7000D58B4 /* YDImageContentView.xib */,
 				E57142F525AD9F5D000D58B4 /* YDMultilImageView.swift */,
 				E55A3BAF259B179C00B312F3 /* YDMultiImageTableViewCell.swift */,
 			);
@@ -401,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */,
+				E571430025AED3F8000D58B4 /* YDImageContentView.xib in Resources */,
 				E55A3A6625957E1A00B312F3 /* YDLeftImageTableViewCell.xib in Resources */,
 				E5644126250A213D0016B464 /* Assets.xcassets in Resources */,
 			);
@@ -467,6 +477,7 @@
 				E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */,
 				E55A3A6C2595C17800B312F3 /* YDReqModel.swift in Sources */,
 				E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */,
+				E571431B25AEED05000D58B4 /* YDBaseViewController.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
 				E55A3B96259B014900B312F3 /* UIView+ECExtension.swift in Sources */,
@@ -481,6 +492,7 @@
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
 				E55A3A8D25997D9100B312F3 /* YDBottomView.swift in Sources */,
+				E57142FD25AED3E6000D58B4 /* YDImageContentView.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
 				E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */,
 				E55A3BB1259B179C00B312F3 /* YDMultiImageTableViewCell.swift in Sources */,

@@ -31,5 +31,10 @@ class YDContentModel: YDBaseModel {
     
     var followCount : Float = 0.0
     
+    var cellHeight : CGFloat = 0
+
+    
+    
+    
     
 }

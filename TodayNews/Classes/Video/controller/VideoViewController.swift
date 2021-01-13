@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: YDBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

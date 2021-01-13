@@ -14,6 +14,7 @@ target 'TodayNews' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SnapKit'
+  pod 'GKNavigationBarSwift'
   # pod 'SQLite.swift'
 #  pod 'SQLite.swift', '~> 0.12.0'
   pod 'SVProgressHUD'

@@ -57,12 +57,15 @@ class YDBottomView: UIView {
             // 置顶
             if newValue.topLevel > 1 {
                 levelLab.text = " 置顶 "
+                levelLab.alpha = 1
             }else
             {
                 levelLab.text = ""
+                levelLab.alpha = 0
 //                levelLab.hidden = true
             }
-            
+            timeLab.sizeToFit()
+            infoLab.sizeToFit()
         }
         get{
             return tempModel ?? YDContentModel()

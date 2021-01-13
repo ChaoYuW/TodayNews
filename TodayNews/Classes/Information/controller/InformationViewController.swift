@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InformationViewController: UIViewController {
+class InformationViewController: YDBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

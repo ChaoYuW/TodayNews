@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LivingViewController: UIViewController {
+class LivingViewController: YDBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
