@@ -11,8 +11,6 @@ import UIKit
 public let ECConfigure = ECAppConfigure.shared
 open class ECAppConfigure: NSObject {
 
-    
-    
     // 单例
     public static let shared: ECAppConfigure = {
         let instance = ECAppConfigure()

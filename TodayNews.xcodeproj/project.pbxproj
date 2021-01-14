@@ -40,6 +40,7 @@
 		E571435825AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E571435625AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib */; };
 		E571435B25B03724000D58B4 /* ECAppConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571435A25B03724000D58B4 /* ECAppConfigure.swift */; };
 		E571437325B03CBA000D58B4 /* UIViewController+ECExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */; };
+		E571437625B04A99000D58B4 /* YDWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571437525B04A99000D58B4 /* YDWebViewController.swift */; };
 		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
 		E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22446259431BA0084DD69 /* YDBaseModel.swift */; };
 		E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F224492594327F0084DD69 /* YDChannelModel.swift */; };
@@ -90,6 +91,7 @@
 		E571435625AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoShortVideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		E571435A25B03724000D58B4 /* ECAppConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECAppConfigure.swift; sourceTree = "<group>"; };
 		E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ECExtension.swift"; sourceTree = "<group>"; };
+		E571437525B04A99000D58B4 /* YDWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWebViewController.swift; sourceTree = "<group>"; };
 		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
 		E5F22446259431BA0084DD69 /* YDBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseModel.swift; sourceTree = "<group>"; };
 		E5F224492594327F0084DD69 /* YDChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDChannelModel.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				E564414E250A2BF30016B464 /* InformationViewController.swift */,
 				E571434C25AEFD8E000D58B4 /* InformationTableViewController.swift */,
 				E571434F25AFD9C1000D58B4 /* YDInfoShortListViewController.swift */,
+				E571437525B04A99000D58B4 /* YDWebViewController.swift */,
 				E571435225AFE15D000D58B4 /* LoadMoreDataProtocol.swift */,
 			);
 			path = controller;
@@ -500,6 +503,7 @@
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
 				E571435325AFE15D000D58B4 /* LoadMoreDataProtocol.swift in Sources */,
 				E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */,
+				E571437625B04A99000D58B4 /* YDWebViewController.swift in Sources */,
 				E571435025AFD9C2000D58B4 /* YDInfoShortListViewController.swift in Sources */,
 				E55A3BC9259DAD2F00B312F3 /* UIKit+Extension.swift in Sources */,
 				E564411D250A213B0016B464 /* AppDelegate.swift in Sources */,
