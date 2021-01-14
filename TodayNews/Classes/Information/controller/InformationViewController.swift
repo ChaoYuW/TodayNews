@@ -14,7 +14,9 @@ class InformationViewController: YDBaseViewController {
 
     private var segmentedDataSource: JXSegmentedTitleDataSource!
     private var menuList = [YDChannelModel]()
-    private var tempVc : InformationTableViewController?
+    private var tempInfoVc : InformationTableViewController?
+    private var tempInfoShortVc : YDInfoShortListViewController?
+    
     private var _selectedIndex : Int = 0
     
     lazy private var topBgImgView : UIImageView = {
@@ -137,45 +139,106 @@ class InformationViewController: YDBaseViewController {
     func requestListPageIndex(pageIndex : Int) {
         
         let selectIndex = _selectedIndex
-        let channel = self.menuList[selectIndex]
-        let list : Optional<InformationTableViewController>
-//        list.reqParam
+        let channelModel = self.menuList[selectIndex]
+        
+        
+        
+//        list.reqPar
         let keys = self.listContainerView.validListDict.keys
         
         if keys.contains(selectIndex) {
-            list = self.listContainerView.validListDict[selectIndex] as? InformationTableViewController
-        }else {
-            list = tempVc
+//            switch channelModel.displayStyle {
+//            case "short-video":
+//                tempVc = self.listContainerView.validListDict[selectIndex] as? YDInfoShortListViewController
+//            default:
+//
+//            }
+            tempInfoVc = self.listContainerView.validListDict[selectIndex] as? InformationTableViewController
         }
         
         var param = [String : Any]()
         
-        param["channel"] = ["id":channel.id]
+        param["channel"] = ["id":channelModel.id]
         param["pageNo"] = pageIndex
         param["pageSize"] = 10
         
         
-        print("选中 \(selectIndex) \(param) \(String(describing: list))")
+        print("选中 \(selectIndex) \(param) \(String(describing: tempInfoVc))")
+        
+        HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
+            
+            guard let dataDict = result["data"] as? [String :Any] else {return}
+            guard let dataAry = dataDict["records"] as? Array<Any> else{return}
+            if pageIndex == 1 {
+                self.tempInfoVc?.dataMuAry.removeAll()
+            }
+            
+            if dataAry.count < 10 {
+                self.tempInfoVc?.isNoMoreData = true
+            }else
+            {
+                self.tempInfoVc?.isNoMoreData = false
+            }
+            
+            for dict in dataAry {
+                if let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any]) {
+                    self.tempInfoVc?.dataMuAry.append(model)
+                }
+                
+            }
+            self.tempInfoVc?.reloadData()
+        }
+    }
+    func requestShortListPageIndex(pageIndex : Int) {
+        
+        let selectIndex = _selectedIndex
+        let channelModel = self.menuList[selectIndex]
+        
+        
+//        list.reqPar
+        let keys = self.listContainerView.validListDict.keys
+        
+        if keys.contains(selectIndex) {
+//            switch channelModel.displayStyle {
+//            case "short-video":
+//                tempVc = self.listContainerView.validListDict[selectIndex] as? YDInfoShortListViewController
+//            default:
+//
+//            }
+            tempInfoShortVc = self.listContainerView.validListDict[selectIndex] as? YDInfoShortListViewController
+        }
+        
+        var param = [String : Any]()
+        
+        param["channel"] = ["id":channelModel.id]
+        param["pageNo"] = pageIndex
+        param["pageSize"] = 10
+        
+        
+        print("选中 \(selectIndex) \(param) \(String(describing: tempInfoShortVc))")
         
         HttpRequest.request(methodType: .POST, urlString: news_content_listURL, param: param) { (result) in
             
             guard let dataDict = result["data"] as? [String :Any] else {return}
             guard let dataAry = dataDict["records"] as? Array<Any> else{return}
             
+            if pageIndex == 1 {
+                self.tempInfoShortVc?.dataMuAry.removeAll()
+            }
             if dataAry.count < 10 {
-                list?.isNoMoreData = true
+                self.tempInfoShortVc?.isNoMoreData = true
             }else
             {
-                list?.isNoMoreData = false
+                self.tempInfoShortVc?.isNoMoreData = false
             }
             
             for dict in dataAry {
                 if let model = JSONDeserializer<YDContentModel>.deserializeFrom(dict: dict as? [String:Any]) {
-                    list?.dataMuAry.append(model)
+                    self.tempInfoShortVc?.dataMuAry.append(model)
                 }
                 
             }
-            list?.reloadData()
+            self.tempInfoShortVc?.reloadData()
         }
     }
     
@@ -199,7 +262,15 @@ class InformationViewController: YDBaseViewController {
 
 extension InformationViewController : LoadDataDelegate{
     func loadPageIndex(_ pageIndex: NSInteger) {
-        self.requestListPageIndex(pageIndex: pageIndex)
+        let selectIndex = _selectedIndex
+        let channelModel = self.menuList[selectIndex]
+        switch channelModel.displayStyle {
+        case "short-video":
+            self.requestShortListPageIndex(pageIndex: pageIndex)
+        default:
+            self.requestListPageIndex(pageIndex: pageIndex)
+        }
+        
     }
 }
 extension InformationViewController : JXSegmentedViewDelegate
@@ -222,13 +293,30 @@ extension InformationViewController : JXSegmentedListContainerViewDataSource
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         
         _selectedIndex = index
-        let vc = InformationTableViewController()
-        vc.delegate = self
-        tempVc = vc
-        vc.reqParam = YDReqModel();
-        requestListPageIndex(pageIndex: 1)
-        print("创建 /(index)")
-        return vc
+        
+        let channelModel = self.menuList[index]
+        switch channelModel.displayStyle {
+        case "short-video":
+            let vc = YDInfoShortListViewController()
+            vc.delegate = self
+            tempInfoShortVc = vc
+            vc.reqParam = YDReqModel();
+            loadPageIndex(1)
+            print("创建 /(index)")
+            return vc
+            
+        default:
+            let vc = InformationTableViewController()
+            vc.delegate = self
+            tempInfoVc = vc
+            vc.reqParam = YDReqModel();
+            loadPageIndex(1)
+            print("创建 /(index)")
+            return vc
+            
+        }
+        
+        
     }
     
     

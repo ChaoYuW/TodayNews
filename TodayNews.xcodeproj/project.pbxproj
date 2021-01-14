@@ -34,6 +34,12 @@
 		E571434825AEFD29000D58B4 /* YDReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571434625AEFD29000D58B4 /* YDReqModel.swift */; };
 		E571434925AEFD29000D58B4 /* YDContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571434725AEFD29000D58B4 /* YDContentModel.swift */; };
 		E571434D25AEFD8E000D58B4 /* InformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571434C25AEFD8E000D58B4 /* InformationTableViewController.swift */; };
+		E571435025AFD9C2000D58B4 /* YDInfoShortListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571434F25AFD9C1000D58B4 /* YDInfoShortListViewController.swift */; };
+		E571435325AFE15D000D58B4 /* LoadMoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571435225AFE15D000D58B4 /* LoadMoreDataProtocol.swift */; };
+		E571435725AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571435525AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift */; };
+		E571435825AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E571435625AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib */; };
+		E571435B25B03724000D58B4 /* ECAppConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571435A25B03724000D58B4 /* ECAppConfigure.swift */; };
+		E571437325B03CBA000D58B4 /* UIViewController+ECExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */; };
 		E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */; };
 		E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22446259431BA0084DD69 /* YDBaseModel.swift */; };
 		E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F224492594327F0084DD69 /* YDChannelModel.swift */; };
@@ -78,6 +84,12 @@
 		E571434625AEFD29000D58B4 /* YDReqModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDReqModel.swift; sourceTree = "<group>"; };
 		E571434725AEFD29000D58B4 /* YDContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDContentModel.swift; sourceTree = "<group>"; };
 		E571434C25AEFD8E000D58B4 /* InformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationTableViewController.swift; sourceTree = "<group>"; };
+		E571434F25AFD9C1000D58B4 /* YDInfoShortListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDInfoShortListViewController.swift; sourceTree = "<group>"; };
+		E571435225AFE15D000D58B4 /* LoadMoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreDataProtocol.swift; sourceTree = "<group>"; };
+		E571435525AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoShortVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E571435625AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoShortVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		E571435A25B03724000D58B4 /* ECAppConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECAppConfigure.swift; sourceTree = "<group>"; };
+		E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ECExtension.swift"; sourceTree = "<group>"; };
 		E5F22411259317B80084DD69 /* UIDevice-iphoneX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice-iphoneX.swift"; sourceTree = "<group>"; };
 		E5F22446259431BA0084DD69 /* YDBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseModel.swift; sourceTree = "<group>"; };
 		E5F224492594327F0084DD69 /* YDChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDChannelModel.swift; sourceTree = "<group>"; };
@@ -239,6 +251,8 @@
 			children = (
 				E564414E250A2BF30016B464 /* InformationViewController.swift */,
 				E571434C25AEFD8E000D58B4 /* InformationTableViewController.swift */,
+				E571434F25AFD9C1000D58B4 /* YDInfoShortListViewController.swift */,
+				E571435225AFE15D000D58B4 /* LoadMoreDataProtocol.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -287,6 +301,8 @@
 				E571433925AEFCC5000D58B4 /* YDMultilImageView.swift */,
 				E571433A25AEFCC5000D58B4 /* YDImageContentView.xib */,
 				E571433B25AEFCC5000D58B4 /* YDImageContentView.swift */,
+				E571435525AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift */,
+				E571435625AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -315,6 +331,7 @@
 				E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */,
 				E55A3B95259B014900B312F3 /* UIView+ECExtension.swift */,
 				E55A3BC8259DAD2F00B312F3 /* UIKit+Extension.swift */,
+				E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -353,6 +370,7 @@
 			children = (
 				E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */,
 				E5F41886250B557F0024C6D1 /* MacroDefine.swift */,
+				E571435A25B03724000D58B4 /* ECAppConfigure.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -419,6 +437,7 @@
 			files = (
 				E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */,
 				E571434125AEFCC5000D58B4 /* YDImageContentView.xib in Resources */,
+				E571435825AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib in Resources */,
 				E5644126250A213D0016B464 /* Assets.xcassets in Resources */,
 				E571433E25AEFCC5000D58B4 /* YDLeftImageTableViewCell.xib in Resources */,
 			);
@@ -479,15 +498,20 @@
 				E5644149250A2ABE0016B464 /* ECMyNavigationController.swift in Sources */,
 				E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */,
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
+				E571435325AFE15D000D58B4 /* LoadMoreDataProtocol.swift in Sources */,
 				E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */,
+				E571435025AFD9C2000D58B4 /* YDInfoShortListViewController.swift in Sources */,
 				E55A3BC9259DAD2F00B312F3 /* UIKit+Extension.swift in Sources */,
 				E564411D250A213B0016B464 /* AppDelegate.swift in Sources */,
+				E571437325B03CBA000D58B4 /* UIViewController+ECExtension.swift in Sources */,
 				E564414D250A2BDD0016B464 /* LivingViewController.swift in Sources */,
 				E5F22447259431BA0084DD69 /* YDBaseModel.swift in Sources */,
 				E571433D25AEFCC5000D58B4 /* YDBottomView.swift in Sources */,
+				E571435725AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift in Sources */,
 				E571434D25AEFD8E000D58B4 /* InformationTableViewController.swift in Sources */,
 				E571431B25AEED05000D58B4 /* YDBaseViewController.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
+				E571435B25B03724000D58B4 /* ECAppConfigure.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
 				E55A3B96259B014900B312F3 /* UIView+ECExtension.swift in Sources */,
 				E571433C25AEFCC5000D58B4 /* YDLeftImageTableViewCell.swift in Sources */,

@@ -11,10 +11,7 @@ import JXSegmentedView
 import MJRefresh
 
 
-protocol LoadDataDelegate : NSObjectProtocol{
-    
-    func loadPageIndex(_ pageIndex : NSInteger)
-}
+
 
 class InformationTableViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     

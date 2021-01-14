@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import <#module#>
+
 
 
 // 屏幕的宽
@@ -17,10 +19,17 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.height
 let MENU_HEIGHT = 50.0
 
 //判断是否iphoneX
-let IS_IPHONEX = UIDevice.current.isIphoneX()
+let IS_IPHONEX = ECConfigure.isIphoneX()
 let NAVBAR_HEIGHT = IS_IPHONEX ? CGFloat(88.0) : CGFloat(64.0)
 let TABBAR_HEIGHT = IS_IPHONEX ? CGFloat(49.0+34.0) : CGFloat(49.0)
 let STATUSBAR_HEIGHT = IS_IPHONEX ? CGFloat(44.0) : CGFloat(20.0)
+public let GK_SAFEAREA_TOP: CGFloat = ECConfigure.safeAreaInsets().top
+public let GK_SAFEAREA_BTM: CGFloat = ECConfigure.safeAreaInsets().bottom
+
+
+
+// 是否是iPad
+public let IS_IPAD: Bool = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad)
 
 
 // 颜色
