@@ -11,17 +11,11 @@ import WebKit
 
 class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegate, UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource {
 
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupFrame()
     }
-    
-
-    
-    
     
     func setupUI() {
         self.view.addSubview(mainScrollView)
@@ -29,7 +23,7 @@ class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegat
         mainScrollView.addSubview(myTableView)
     }
     func setupFrame() {
-        let mainHeight = SCREEN_HEIGHT - NAVBAR_HEIGHT - TABBAR_HEIGHT
+        let mainHeight = SCREEN_HEIGHT - NAVBAR_HEIGHT
         mainScrollView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: mainHeight)
         myWebView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: mainHeight)
         myTableView.frame = CGRect(x: 0, y: myWebView.ec_bottom, width: SCREEN_WIDTH, height: mainHeight)
@@ -66,12 +60,13 @@ class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegat
         
         let scrollView = UIScrollView(frame: CGRect.zero)
         scrollView.delegate = self
+        scrollView.backgroundColor = UIColor.white
         return scrollView
         
     } ()
     lazy var myWebView: WKWebView = {
         let myWebView = WKWebView.init(frame: self.view.frame)
-        let web_url = URL.init(string: "http://www.baidu.com")
+        let web_url = URL.init(string: "http://106.14.148.72/dist/#/")
         myWebView.load(URLRequest.init(url: web_url!))
         myWebView.navigationDelegate = self
         myWebView.uiDelegate = self
