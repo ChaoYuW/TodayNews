@@ -18,16 +18,24 @@ class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegat
     }
     
     func setupUI() {
-        self.view.addSubview(mainScrollView)
-        mainScrollView.addSubview(myWebView)
-        mainScrollView.addSubview(myTableView)
+        self.view.addSubview(containerScrollView)
+        containerScrollView.addSubview(myWebView)
+        containerScrollView.addSubview(myTableView)
     }
     func setupFrame() {
         let mainHeight = SCREEN_HEIGHT - NAVBAR_HEIGHT
-        mainScrollView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: mainHeight)
+        containerScrollView.frame = CGRect(x: 0, y: NAVBAR_HEIGHT, width: SCREEN_WIDTH, height: mainHeight)
         myWebView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: mainHeight)
         myTableView.frame = CGRect(x: 0, y: myWebView.ec_bottom, width: SCREEN_WIDTH, height: mainHeight)
-        mainScrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: mainHeight*2)
+        containerScrollView.contentSize = CGSize(width: SCREEN_WIDTH, height: mainHeight*2)
+    }
+    func addObservers() {
+        myWebView.addObserver(self, forKeyPath: "scrollView.contentSize", options: .new, context: nil)
+        myTableView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    func removeObservers() {
+        myWebView.removeObserver(self, forKeyPath: "scrollView.contentSize")
+        myTableView.removeObserver(self, forKeyPath: "contentSize")
     }
     
     // #pragma mark - UITableViewDataSource
@@ -45,8 +53,40 @@ class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegat
         
     }
     
+    
+    override class func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        if let scroll = object as? UIScrollView {
+            if keyPath == "contentSize" {
+                
+            }
+        } else if let webScroll = object as? WKWebView {
+            if keyPath == "scrollView.contentSize" {
+                
+            }
+        }
+    }
+    
+    
    // #pragma mark - UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if containerScrollView != scrollView{
+            return
+        }
+        let offsetY = scrollView.contentOffset.y
+        
+        let webViewHeight = myWebView.ec_height
+        let tableViewHeight = myTableView.ec_height
+        
+        var contentRect = containerScrollView.frame
+        
+        if offsetY <= 0 {
+            contentRect.origin.y = 0
+            
+        }
+        
+        
+        
         
     }
     //MARK:-WKNavigationDelegate
@@ -56,7 +96,7 @@ class YDWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDelegat
     
     
     //MARK:-lazy
-    lazy var mainScrollView : UIScrollView = {
+    lazy var containerScrollView : UIScrollView = {
         
         let scrollView = UIScrollView(frame: CGRect.zero)
         scrollView.delegate = self
