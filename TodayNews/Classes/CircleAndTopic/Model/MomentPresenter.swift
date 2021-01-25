@@ -199,3 +199,33 @@ class MomentPresenter: NSObject {
     
 }
 
+// MARK: SLTableViewCellDelegate
+extension MomentPresenter : ECTableViewCellDelegate {
+    //富文本点击跳转事件
+    func tableViewCell(_ tableViewCell: YDMomentTableViewCell, clickedLinks url: String, characterRange: NSRange, linkType: ECTextLinkType.RawValue, indexPath: IndexPath) {
+        if linkType == ECTextLinkType.Webpage.rawValue {
+
+        }else  if linkType == ECTextLinkType.Picture.rawValue {
+            let beginning: UITextPosition = tableViewCell.textView.beginningOfDocument;
+            let startPosition: UITextPosition = tableViewCell.textView.position(from: beginning, offset: characterRange.location)!
+            let endPosition: UITextPosition = tableViewCell.textView.position(from: beginning, offset: characterRange.location + characterRange.length)!
+            let selectedRange: UITextRange = tableViewCell.textView.textRange(from: startPosition, to: endPosition)!
+            //选中的文本在textViewd上的区域坐标
+            let rect: CGRect = tableViewCell.textView.firstRect(for: selectedRange)
+        } else if linkType == ECTextLinkType.FullText.rawValue {
+            let model: ECModel = self.dataArray[indexPath.row] as! ECModel
+            var layout: ECLayout = self.layoutArray[indexPath.row] as! ECLayout
+            layout.expan = !layout.expan
+            //元组
+            let attStrAndHeight:(attributedString:NSMutableAttributedString, height:CGFloat) = self.matchesResultOfTitle(title: model.title!, expan: layout.expan)
+            layout.attributedString = attStrAndHeight.attributedString
+            layout.cellHeight = (15 + 35 + 15 + attStrAndHeight.height + 15 + self.heightOfImages(images: model.images))
+            self.layoutArray.replaceObject(at: indexPath.row, with: layout)
+            self.fullTextBlock!(indexPath)
+        }
+    }
+    
+    //图片点击
+    func tableViewCell(_ tableViewCell: YDMomentTableViewCell, tapImageAction indexOfImages: NSInteger, indexPath: IndexPath) {
+    }
+}

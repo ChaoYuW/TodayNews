@@ -105,7 +105,7 @@ extension YDTopicViewController : UITableViewDelegate, UITableViewDataSource {
         if indexPath.row <= self.layoutMuAry.count - 1 {
             layout = self.layoutMuAry[indexPath.row] as? ECLayout
         }
-        cell.delegate = self.presenter as? ECTableViewCellDelegate
+        cell.delegate = self.presenter 
         cell.cellIndexPath = indexPath
         cell.configureCell(model: model, layout: layout)
         return cell;

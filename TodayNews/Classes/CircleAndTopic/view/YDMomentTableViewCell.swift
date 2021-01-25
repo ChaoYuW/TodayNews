@@ -10,8 +10,16 @@ import UIKit
 import Kingfisher
 
 
+//定义枚举 富文本链接类型
+enum ECTextLinkType: Int {
+    case Webpage
+    case Picture
+    case FullText
+}
+
 @objc protocol ECTableViewCellDelegate : NSObjectProtocol {
     func tableViewCell(_ tableViewCell: YDMomentTableViewCell, tapImageAction indexOfImages:NSInteger, indexPath: IndexPath)  //点击图片
+    func tableViewCell(_ tableViewCell: YDMomentTableViewCell, clickedLinks url:String,  characterRange: NSRange, linkType: ECTextLinkType.RawValue, indexPath: IndexPath);
     
 }
 //标题富文本视图
@@ -255,5 +263,24 @@ class YDMomentTableViewCell: UITableViewCell {
 
 // MARK: UITextViewDelegate
 extension YDMomentTableViewCell : UITextViewDelegate {
-    
+    //点击链接
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        let selectdText: String = textView.attributedText.attributedSubstring(from: characterRange).string
+        print("点击了：\(selectdText) \n    链接值：\(URL.absoluteString) ")
+        var linkType: ECTextLinkType = ECTextLinkType.Webpage
+        if URL.absoluteString == "FullText" {
+            linkType = ECTextLinkType.FullText
+        }else if selectdText.hasSuffix("查看图片"){
+            linkType = ECTextLinkType.Picture
+        }else {
+            linkType = ECTextLinkType.Webpage
+        }
+        self.delegate?.tableViewCell(self, clickedLinks: URL.absoluteString, characterRange: characterRange, linkType: linkType.rawValue, indexPath: self.cellIndexPath!)
+        return false
+    }
+    //点击富文本附件 图片等
+    func textView(_ textView: UITextView, shouldInteractWith textAttachment: NSTextAttachment, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        print("点击了附件\( NSAttributedString(attachment: textAttachment).string) ")
+        return false
+    }
 }
