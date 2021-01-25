@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "61B932EC-1E8D-4241-BB03-10EEC47A6D06"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TodayNews/Classes/Information/controller/YDInfoShortListViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "reloadData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E7AC46FD-D50A-41DA-8591-DE0AE1044C70"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "TodayNews/Classes/Information/controller/InformationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "requestShortListPageIndex(pageIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +46,8 @@
             filePath = "TodayNews/Classes/Information/controller/InformationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "requestShortListPageIndex(pageIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,9 +62,41 @@
             filePath = "TodayNews/Classes/Information/controller/InformationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "requestShortListPageIndex(pageIndex:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "539989EE-EEA9-4BB5-94DA-29D9CE5C568B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodayNews/Classes/CircleAndTopic/controller/YDTopicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4C5BF79-A3D7-4B26-A62D-F5E43D160BE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TodayNews/Classes/CircleAndTopic/controller/YDTopicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

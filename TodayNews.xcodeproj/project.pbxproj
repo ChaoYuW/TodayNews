@@ -51,6 +51,10 @@
 		E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F2246D25948FDE0084DD69 /* YDMultipleModel.swift */; };
 		E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */; };
 		E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F41886250B557F0024C6D1 /* MacroDefine.swift */; };
+		E5F72B3925BE9F01009C6FBF /* YDTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B3825BE9F01009C6FBF /* YDTopicViewController.swift */; };
+		E5F72B3D25BEA022009C6FBF /* YDMomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B3C25BEA022009C6FBF /* YDMomentTableViewCell.swift */; };
+		E5F72B4225BEA4E4009C6FBF /* MomentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F72B4125BEA4E4009C6FBF /* MomentPresenter.swift */; };
+		E5F72B4625BEAFB1009C6FBF /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5F72B4525BEAFB0009C6FBF /* Data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +106,10 @@
 		E5F2246D25948FDE0084DD69 /* YDMultipleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDMultipleModel.swift; sourceTree = "<group>"; };
 		E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDInterfaceDef.swift; sourceTree = "<group>"; };
 		E5F41886250B557F0024C6D1 /* MacroDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDefine.swift; sourceTree = "<group>"; };
+		E5F72B3825BE9F01009C6FBF /* YDTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDTopicViewController.swift; sourceTree = "<group>"; };
+		E5F72B3C25BEA022009C6FBF /* YDMomentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDMomentTableViewCell.swift; sourceTree = "<group>"; };
+		E5F72B4125BEA4E4009C6FBF /* MomentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentPresenter.swift; sourceTree = "<group>"; };
+		E5F72B4525BEAFB0009C6FBF /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 			children = (
 				E5644130250A27110016B464 /* Classes */,
 				E564411C250A213B0016B464 /* AppDelegate.swift */,
+				E5F72B3225BE9E03009C6FBF /* Resource */,
 				E5644125250A213D0016B464 /* Assets.xcassets */,
 				E5644127250A213D0016B464 /* LaunchScreen.storyboard */,
 				E564412A250A213D0016B464 /* Info.plist */,
@@ -166,6 +175,7 @@
 		E5644130250A27110016B464 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E5F72B3025BE9DD8009C6FBF /* CircleAndTopic */,
 				E5644145250A2A500016B464 /* Video */,
 				E5644142250A2A320016B464 /* Information */,
 				E564413F250A2A180016B464 /* Living */,
@@ -378,6 +388,48 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		E5F72B3025BE9DD8009C6FBF /* CircleAndTopic */ = {
+			isa = PBXGroup;
+			children = (
+				E5F72B4025BEA4BB009C6FBF /* Model */,
+				E5F72B3B25BE9FB6009C6FBF /* view */,
+				E5F72B3125BE9DE4009C6FBF /* controller */,
+			);
+			path = CircleAndTopic;
+			sourceTree = "<group>";
+		};
+		E5F72B3125BE9DE4009C6FBF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5F72B3825BE9F01009C6FBF /* YDTopicViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E5F72B3225BE9E03009C6FBF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E5F72B4525BEAFB0009C6FBF /* Data.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E5F72B3B25BE9FB6009C6FBF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E5F72B3C25BEA022009C6FBF /* YDMomentTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E5F72B4025BEA4BB009C6FBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5F72B4125BEA4E4009C6FBF /* MomentPresenter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,6 +464,7 @@
 				TargetAttributes = {
 					E5644118250A213B0016B464 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -438,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F72B4625BEAFB1009C6FBF /* Data.plist in Resources */,
 				E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */,
 				E571434125AEFCC5000D58B4 /* YDImageContentView.xib in Resources */,
 				E571435825AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib in Resources */,
@@ -502,6 +556,7 @@
 				E5F2246E25948FDE0084DD69 /* YDMultipleModel.swift in Sources */,
 				E5644151250A2C040016B464 /* VideoViewController.swift in Sources */,
 				E571435325AFE15D000D58B4 /* LoadMoreDataProtocol.swift in Sources */,
+				E5F72B3925BE9F01009C6FBF /* YDTopicViewController.swift in Sources */,
 				E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */,
 				E571437625B04A99000D58B4 /* YDWebViewController.swift in Sources */,
 				E571435025AFD9C2000D58B4 /* YDInfoShortListViewController.swift in Sources */,
@@ -515,7 +570,9 @@
 				E571434D25AEFD8E000D58B4 /* InformationTableViewController.swift in Sources */,
 				E571431B25AEED05000D58B4 /* YDBaseViewController.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
+				E5F72B4225BEA4E4009C6FBF /* MomentPresenter.swift in Sources */,
 				E571435B25B03724000D58B4 /* ECAppConfigure.swift in Sources */,
+				E5F72B3D25BEA022009C6FBF /* YDMomentTableViewCell.swift in Sources */,
 				E5674B6F250A65F500087C6C /* HttpRequest.swift in Sources */,
 				E55A3B96259B014900B312F3 /* UIView+ECExtension.swift in Sources */,
 				E571433C25AEFCC5000D58B4 /* YDLeftImageTableViewCell.swift in Sources */,
@@ -670,6 +727,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JEAGCUN8WT;
 				INFOPLIST_FILE = TodayNews/Info.plist;
@@ -679,6 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -689,6 +748,7 @@
 			baseConfigurationReference = 46C49A60B138ADF331E1BB46 /* Pods-TodayNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JEAGCUN8WT;
 				INFOPLIST_FILE = TodayNews/Info.plist;

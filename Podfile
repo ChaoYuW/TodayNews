@@ -26,5 +26,6 @@ target 'TodayNews' do
   pod 'lottie-ios'
   pod 'JXSegmentedView'
   pod 'LookinServer', :configurations => ['Debug']
+  pod 'GDPerformanceView-Swift', '~> 2.0.2'
 
 end

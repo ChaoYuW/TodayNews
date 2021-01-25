@@ -23,7 +23,7 @@ class ECMyTabBarController: UITabBarController {
     {
         setChildViewController(HomeViewController(), title: "首页", imageName: "home")
         setChildViewController(InformationViewController(), title: "新闻", imageName: "information")
-        setChildViewController(LivingViewController(), title: "直播", imageName: "live")
+        setChildViewController(YDTopicViewController(), title: "动态", imageName: "live")
     }
     private func setChildViewController(_ childController: UIViewController, title: String, imageName: String)
     {

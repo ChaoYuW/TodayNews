@@ -9,6 +9,7 @@
 import UIKit
 import JXSegmentedView
 import HandyJSON
+import GDPerformanceView_Swift
 
 class InformationViewController: YDBaseViewController {
 
@@ -73,6 +74,8 @@ class InformationViewController: YDBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //性能监测工具
+        PerformanceMonitor.shared().start()
         self.gk_navBarAlpha = 0
         self.gk_navItemLeftSpace = 0
         self.gk_navItemRightSpace = 0
