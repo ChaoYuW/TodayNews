@@ -247,7 +247,7 @@ class InformationViewController: YDBaseViewController {
     
     @objc func searchClick(_ button :UIButton){
         
-        let vc = YDWebViewController()
+        let vc = YDOnlyWebViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated:true)
     }

@@ -8,6 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		8D0BC63A0222142799448249 /* Pods_TodayNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF4E4B4446E1131BDFFBF07 /* Pods_TodayNews.framework */; };
+		E538683926004AF30060D719 /* ZXYWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538680B26004AF30060D719 /* ZXYWebView.swift */; };
+		E538683A26004AF30060D719 /* ZXYWebViewPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538680C26004AF30060D719 /* ZXYWebViewPool.swift */; };
+		E538683B26004AF30060D719 /* ZXYWebEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538680D26004AF30060D719 /* ZXYWebEntity.swift */; };
+		E538683C26004AF30060D719 /* ZXYWebNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538680E26004AF30060D719 /* ZXYWebNavigationBar.swift */; };
+		E538683D26004AF30060D719 /* ZXYWebViewHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538680F26004AF30060D719 /* ZXYWebViewHandle.swift */; };
+		E538683E26004AF30060D719 /* dealerNews.html in Resources */ = {isa = PBXBuildFile; fileRef = E538681126004AF30060D719 /* dealerNews.html */; };
+		E538683F26004AF30060D719 /* industryNews.html in Resources */ = {isa = PBXBuildFile; fileRef = E538681226004AF30060D719 /* industryNews.html */; };
+		E538684026004AF30060D719 /* gray_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681426004AF30060D719 /* gray_stars.png */; };
+		E538684126004AF30060D719 /* finger_down.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681526004AF30060D719 /* finger_down.png */; };
+		E538684226004AF30060D719 /* gold_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681626004AF30060D719 /* gold_stars.png */; };
+		E538684326004AF30060D719 /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681726004AF30060D719 /* left_arrow.png */; };
+		E538684426004AF30060D719 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681826004AF30060D719 /* triangle.png */; };
+		E538684526004AF30060D719 /* finger_up.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681926004AF30060D719 /* finger_up.png */; };
+		E538684626004AF30060D719 /* play1.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681A26004AF30060D719 /* play1.png */; };
+		E538684726004AF30060D719 /* parse.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681B26004AF30060D719 /* parse.png */; };
+		E538684826004AF30060D719 /* play2.png in Resources */ = {isa = PBXBuildFile; fileRef = E538681C26004AF30060D719 /* play2.png */; };
+		E538684926004AF30060D719 /* newsDetails.css in Resources */ = {isa = PBXBuildFile; fileRef = E538681E26004AF30060D719 /* newsDetails.css */; };
+		E538684A26004AF30060D719 /* public.css in Resources */ = {isa = PBXBuildFile; fileRef = E538681F26004AF30060D719 /* public.css */; };
+		E538684B26004AF30060D719 /* previewImage.css in Resources */ = {isa = PBXBuildFile; fileRef = E538682026004AF30060D719 /* previewImage.css */; };
+		E538684C26004AF30060D719 /* mui.min.css in Resources */ = {isa = PBXBuildFile; fileRef = E538682126004AF30060D719 /* mui.min.css */; };
+		E538684D26004AF30060D719 /* ShareHeader.css in Resources */ = {isa = PBXBuildFile; fileRef = E538682226004AF30060D719 /* ShareHeader.css */; };
+		E538684E26004AF30060D719 /* introduction.css in Resources */ = {isa = PBXBuildFile; fileRef = E538682326004AF30060D719 /* introduction.css */; };
+		E538684F26004AF30060D719 /* ibPolicy.html in Resources */ = {isa = PBXBuildFile; fileRef = E538682426004AF30060D719 /* ibPolicy.html */; };
+		E538685026004AF30060D719 /* banner.html in Resources */ = {isa = PBXBuildFile; fileRef = E538682526004AF30060D719 /* banner.html */; };
+		E538685126004AF30060D719 /* ibPolicy.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682826004AF30060D719 /* ibPolicy.js */; };
+		E538685226004AF30060D719 /* dealerNews.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682926004AF30060D719 /* dealerNews.js */; };
+		E538685326004AF30060D719 /* introduction.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682A26004AF30060D719 /* introduction.js */; };
+		E538685426004AF30060D719 /* mui.previewimage.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682C26004AF30060D719 /* mui.previewimage.js */; };
+		E538685526004AF30060D719 /* public.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682D26004AF30060D719 /* public.js */; };
+		E538685626004AF30060D719 /* mui.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682E26004AF30060D719 /* mui.min.js */; };
+		E538685726004AF30060D719 /* mui.zoom.js in Resources */ = {isa = PBXBuildFile; fileRef = E538682F26004AF30060D719 /* mui.zoom.js */; };
+		E538685826004AF30060D719 /* Compatible.min.js in Resources */ = {isa = PBXBuildFile; fileRef = E538683026004AF30060D719 /* Compatible.min.js */; };
+		E538685926004AF30060D719 /* ScreenAdaptation.js in Resources */ = {isa = PBXBuildFile; fileRef = E538683126004AF30060D719 /* ScreenAdaptation.js */; };
+		E538685A26004AF30060D719 /* layer.js in Resources */ = {isa = PBXBuildFile; fileRef = E538683226004AF30060D719 /* layer.js */; };
+		E538685B26004AF30060D719 /* banner.js in Resources */ = {isa = PBXBuildFile; fileRef = E538683426004AF30060D719 /* banner.js */; };
+		E538685C26004AF30060D719 /* industryNews.js in Resources */ = {isa = PBXBuildFile; fileRef = E538683526004AF30060D719 /* industryNews.js */; };
+		E538685D26004AF30060D719 /* Introduction.html in Resources */ = {isa = PBXBuildFile; fileRef = E538683626004AF30060D719 /* Introduction.html */; };
+		E538685E26004AF30060D719 /* ZXYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538683726004AF30060D719 /* ZXYWebViewController.swift */; };
+		E538685F26004AF30060D719 /* ZXYLocalWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E538683826004AF30060D719 /* ZXYLocalWebViewController.swift */; };
+		E5386862260059390060D719 /* UIColor+ECColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5386861260059380060D719 /* UIColor+ECColor.swift */; };
+		E53868682601DFCC0060D719 /* YDOnlyWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53868672601DFCC0060D719 /* YDOnlyWebViewController.swift */; };
 		E55A3A692595849700B312F3 /* YDBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */; };
 		E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */; };
 		E55A3B392599AC6300B312F3 /* UIView+ECFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */; };
@@ -61,6 +102,47 @@
 		46C49A60B138ADF331E1BB46 /* Pods-TodayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.release.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.release.xcconfig"; sourceTree = "<group>"; };
 		9A8C2F22EC64078A2EA0E74A /* Pods-TodayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.debug.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.debug.xcconfig"; sourceTree = "<group>"; };
 		BBF4E4B4446E1131BDFFBF07 /* Pods_TodayNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E538680B26004AF30060D719 /* ZXYWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebView.swift; sourceTree = "<group>"; };
+		E538680C26004AF30060D719 /* ZXYWebViewPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebViewPool.swift; sourceTree = "<group>"; };
+		E538680D26004AF30060D719 /* ZXYWebEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebEntity.swift; sourceTree = "<group>"; };
+		E538680E26004AF30060D719 /* ZXYWebNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebNavigationBar.swift; sourceTree = "<group>"; };
+		E538680F26004AF30060D719 /* ZXYWebViewHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebViewHandle.swift; sourceTree = "<group>"; };
+		E538681126004AF30060D719 /* dealerNews.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dealerNews.html; sourceTree = "<group>"; };
+		E538681226004AF30060D719 /* industryNews.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = industryNews.html; sourceTree = "<group>"; };
+		E538681426004AF30060D719 /* gray_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray_stars.png; sourceTree = "<group>"; };
+		E538681526004AF30060D719 /* finger_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger_down.png; sourceTree = "<group>"; };
+		E538681626004AF30060D719 /* gold_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold_stars.png; sourceTree = "<group>"; };
+		E538681726004AF30060D719 /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		E538681826004AF30060D719 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangle.png; sourceTree = "<group>"; };
+		E538681926004AF30060D719 /* finger_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finger_up.png; sourceTree = "<group>"; };
+		E538681A26004AF30060D719 /* play1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play1.png; sourceTree = "<group>"; };
+		E538681B26004AF30060D719 /* parse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parse.png; sourceTree = "<group>"; };
+		E538681C26004AF30060D719 /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play2.png; sourceTree = "<group>"; };
+		E538681E26004AF30060D719 /* newsDetails.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = newsDetails.css; sourceTree = "<group>"; };
+		E538681F26004AF30060D719 /* public.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = public.css; sourceTree = "<group>"; };
+		E538682026004AF30060D719 /* previewImage.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = previewImage.css; sourceTree = "<group>"; };
+		E538682126004AF30060D719 /* mui.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = mui.min.css; sourceTree = "<group>"; };
+		E538682226004AF30060D719 /* ShareHeader.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ShareHeader.css; sourceTree = "<group>"; };
+		E538682326004AF30060D719 /* introduction.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = introduction.css; sourceTree = "<group>"; };
+		E538682426004AF30060D719 /* ibPolicy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ibPolicy.html; sourceTree = "<group>"; };
+		E538682526004AF30060D719 /* banner.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banner.html; sourceTree = "<group>"; };
+		E538682826004AF30060D719 /* ibPolicy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ibPolicy.js; sourceTree = "<group>"; };
+		E538682926004AF30060D719 /* dealerNews.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = dealerNews.js; sourceTree = "<group>"; };
+		E538682A26004AF30060D719 /* introduction.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = introduction.js; sourceTree = "<group>"; };
+		E538682C26004AF30060D719 /* mui.previewimage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mui.previewimage.js; sourceTree = "<group>"; };
+		E538682D26004AF30060D719 /* public.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = public.js; sourceTree = "<group>"; };
+		E538682E26004AF30060D719 /* mui.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mui.min.js; sourceTree = "<group>"; };
+		E538682F26004AF30060D719 /* mui.zoom.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mui.zoom.js; sourceTree = "<group>"; };
+		E538683026004AF30060D719 /* Compatible.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Compatible.min.js; sourceTree = "<group>"; };
+		E538683126004AF30060D719 /* ScreenAdaptation.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ScreenAdaptation.js; sourceTree = "<group>"; };
+		E538683226004AF30060D719 /* layer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layer.js; sourceTree = "<group>"; };
+		E538683426004AF30060D719 /* banner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = banner.js; sourceTree = "<group>"; };
+		E538683526004AF30060D719 /* industryNews.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = industryNews.js; sourceTree = "<group>"; };
+		E538683626004AF30060D719 /* Introduction.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Introduction.html; sourceTree = "<group>"; };
+		E538683726004AF30060D719 /* ZXYWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYWebViewController.swift; sourceTree = "<group>"; };
+		E538683826004AF30060D719 /* ZXYLocalWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXYLocalWebViewController.swift; sourceTree = "<group>"; };
+		E5386861260059380060D719 /* UIColor+ECColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ECColor.swift"; sourceTree = "<group>"; };
+		E53868672601DFCC0060D719 /* YDOnlyWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDOnlyWebViewController.swift; sourceTree = "<group>"; };
 		E55A3A682595849700B312F3 /* YDBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDBaseTableViewController.swift; sourceTree = "<group>"; };
 		E55A3A872595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutConstraint+ECDesignable.swift"; sourceTree = "<group>"; };
 		E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ECFrame.swift"; sourceTree = "<group>"; };
@@ -139,6 +221,108 @@
 				46C49A60B138ADF331E1BB46 /* Pods-TodayNews.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E538680A26004AF30060D719 /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E538680B26004AF30060D719 /* ZXYWebView.swift */,
+				E538680C26004AF30060D719 /* ZXYWebViewPool.swift */,
+				E538680D26004AF30060D719 /* ZXYWebEntity.swift */,
+				E538680E26004AF30060D719 /* ZXYWebNavigationBar.swift */,
+				E538680F26004AF30060D719 /* ZXYWebViewHandle.swift */,
+				E538681026004AF30060D719 /* newsHtmlFiles */,
+				E538683726004AF30060D719 /* ZXYWebViewController.swift */,
+				E538683826004AF30060D719 /* ZXYLocalWebViewController.swift */,
+			);
+			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		E538681026004AF30060D719 /* newsHtmlFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E538681126004AF30060D719 /* dealerNews.html */,
+				E538681226004AF30060D719 /* industryNews.html */,
+				E538681326004AF30060D719 /* img */,
+				E538681D26004AF30060D719 /* styles */,
+				E538682426004AF30060D719 /* ibPolicy.html */,
+				E538682526004AF30060D719 /* banner.html */,
+				E538682626004AF30060D719 /* scripts */,
+				E538683626004AF30060D719 /* Introduction.html */,
+			);
+			path = newsHtmlFiles;
+			sourceTree = "<group>";
+		};
+		E538681326004AF30060D719 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E538681426004AF30060D719 /* gray_stars.png */,
+				E538681526004AF30060D719 /* finger_down.png */,
+				E538681626004AF30060D719 /* gold_stars.png */,
+				E538681726004AF30060D719 /* left_arrow.png */,
+				E538681826004AF30060D719 /* triangle.png */,
+				E538681926004AF30060D719 /* finger_up.png */,
+				E538681A26004AF30060D719 /* play1.png */,
+				E538681B26004AF30060D719 /* parse.png */,
+				E538681C26004AF30060D719 /* play2.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		E538681D26004AF30060D719 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				E538681E26004AF30060D719 /* newsDetails.css */,
+				E538681F26004AF30060D719 /* public.css */,
+				E538682026004AF30060D719 /* previewImage.css */,
+				E538682126004AF30060D719 /* mui.min.css */,
+				E538682226004AF30060D719 /* ShareHeader.css */,
+				E538682326004AF30060D719 /* introduction.css */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		E538682626004AF30060D719 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				E538682726004AF30060D719 /* broker */,
+				E538682B26004AF30060D719 /* public */,
+				E538683326004AF30060D719 /* news */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		E538682726004AF30060D719 /* broker */ = {
+			isa = PBXGroup;
+			children = (
+				E538682826004AF30060D719 /* ibPolicy.js */,
+				E538682926004AF30060D719 /* dealerNews.js */,
+				E538682A26004AF30060D719 /* introduction.js */,
+			);
+			path = broker;
+			sourceTree = "<group>";
+		};
+		E538682B26004AF30060D719 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				E538682C26004AF30060D719 /* mui.previewimage.js */,
+				E538682D26004AF30060D719 /* public.js */,
+				E538682E26004AF30060D719 /* mui.min.js */,
+				E538682F26004AF30060D719 /* mui.zoom.js */,
+				E538683026004AF30060D719 /* Compatible.min.js */,
+				E538683126004AF30060D719 /* ScreenAdaptation.js */,
+				E538683226004AF30060D719 /* layer.js */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		E538683326004AF30060D719 /* news */ = {
+			isa = PBXGroup;
+			children = (
+				E538683426004AF30060D719 /* banner.js */,
+				E538683526004AF30060D719 /* industryNews.js */,
+			);
+			path = news;
 			sourceTree = "<group>";
 		};
 		E5644110250A213B0016B464 = {
@@ -220,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				E564414A250A2BCA0016B464 /* HomeViewController.swift */,
+				E53868672601DFCC0060D719 /* YDOnlyWebViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -344,6 +529,7 @@
 				E55A3B382599AC6300B312F3 /* UIView+ECFrame.swift */,
 				E55A3B95259B014900B312F3 /* UIView+ECExtension.swift */,
 				E55A3BC8259DAD2F00B312F3 /* UIKit+Extension.swift */,
+				E5386861260059380060D719 /* UIColor+ECColor.swift */,
 				E571437225B03CBA000D58B4 /* UIViewController+ECExtension.swift */,
 			);
 			path = Extension;
@@ -381,6 +567,7 @@
 		E5F41883250A7F0E0024C6D1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E538680A26004AF30060D719 /* WKWebView */,
 				E5F41884250A7F300024C6D1 /* YDInterfaceDef.swift */,
 				E5F41886250B557F0024C6D1 /* MacroDefine.swift */,
 				E571435A25B03724000D58B4 /* ECAppConfigure.swift */,
@@ -492,11 +679,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F72B4625BEAFB1009C6FBF /* Data.plist in Resources */,
+				E538684C26004AF30060D719 /* mui.min.css in Resources */,
+				E538684D26004AF30060D719 /* ShareHeader.css in Resources */,
+				E538684F26004AF30060D719 /* ibPolicy.html in Resources */,
+				E538685326004AF30060D719 /* introduction.js in Resources */,
+				E538684926004AF30060D719 /* newsDetails.css in Resources */,
 				E5644129250A213D0016B464 /* LaunchScreen.storyboard in Resources */,
+				E538685026004AF30060D719 /* banner.html in Resources */,
 				E571434125AEFCC5000D58B4 /* YDImageContentView.xib in Resources */,
+				E538683F26004AF30060D719 /* industryNews.html in Resources */,
+				E538685426004AF30060D719 /* mui.previewimage.js in Resources */,
+				E538684126004AF30060D719 /* finger_down.png in Resources */,
+				E538685D26004AF30060D719 /* Introduction.html in Resources */,
 				E571435825AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.xib in Resources */,
+				E538684326004AF30060D719 /* left_arrow.png in Resources */,
+				E538684B26004AF30060D719 /* previewImage.css in Resources */,
+				E538684726004AF30060D719 /* parse.png in Resources */,
+				E538684026004AF30060D719 /* gray_stars.png in Resources */,
+				E538685126004AF30060D719 /* ibPolicy.js in Resources */,
+				E538685B26004AF30060D719 /* banner.js in Resources */,
+				E538684426004AF30060D719 /* triangle.png in Resources */,
+				E538685926004AF30060D719 /* ScreenAdaptation.js in Resources */,
+				E538684E26004AF30060D719 /* introduction.css in Resources */,
+				E538685726004AF30060D719 /* mui.zoom.js in Resources */,
+				E538685C26004AF30060D719 /* industryNews.js in Resources */,
+				E538685626004AF30060D719 /* mui.min.js in Resources */,
+				E538684526004AF30060D719 /* finger_up.png in Resources */,
+				E538685A26004AF30060D719 /* layer.js in Resources */,
+				E538684226004AF30060D719 /* gold_stars.png in Resources */,
+				E538684626004AF30060D719 /* play1.png in Resources */,
+				E538684A26004AF30060D719 /* public.css in Resources */,
+				E538684826004AF30060D719 /* play2.png in Resources */,
+				E538685526004AF30060D719 /* public.js in Resources */,
 				E5644126250A213D0016B464 /* Assets.xcassets in Resources */,
+				E538685226004AF30060D719 /* dealerNews.js in Resources */,
 				E571433E25AEFCC5000D58B4 /* YDLeftImageTableViewCell.xib in Resources */,
+				E538685826004AF30060D719 /* Compatible.min.js in Resources */,
+				E538683E26004AF30060D719 /* dealerNews.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +787,8 @@
 				E571433D25AEFCC5000D58B4 /* YDBottomView.swift in Sources */,
 				E571435725AFE8C7000D58B4 /* InfoShortVideoCollectionViewCell.swift in Sources */,
 				E571434D25AEFD8E000D58B4 /* InformationTableViewController.swift in Sources */,
+				E538683D26004AF30060D719 /* ZXYWebViewHandle.swift in Sources */,
+				E538683A26004AF30060D719 /* ZXYWebViewPool.swift in Sources */,
 				E571431B25AEED05000D58B4 /* YDBaseViewController.swift in Sources */,
 				E5F2246B25948EBC0084DD69 /* YDCountModel.swift in Sources */,
 				E5F72B4225BEA4E4009C6FBF /* MomentPresenter.swift in Sources */,
@@ -578,18 +799,25 @@
 				E571433C25AEFCC5000D58B4 /* YDLeftImageTableViewCell.swift in Sources */,
 				E571434225AEFCC5000D58B4 /* YDImageContentView.swift in Sources */,
 				E571433F25AEFCC5000D58B4 /* YDMultiImageTableViewCell.swift in Sources */,
+				E538683926004AF30060D719 /* ZXYWebView.swift in Sources */,
 				E5F41885250A7F300024C6D1 /* YDInterfaceDef.swift in Sources */,
 				E5F2244A2594327F0084DD69 /* YDChannelModel.swift in Sources */,
 				E5644134250A27910016B464 /* ECMyTabBarController.swift in Sources */,
 				E5F224532594347B0084DD69 /* YDPosterCountModel.swift in Sources */,
 				E55A3B392599AC6300B312F3 /* UIView+ECFrame.swift in Sources */,
+				E538685E26004AF30060D719 /* ZXYWebViewController.swift in Sources */,
+				E538683C26004AF30060D719 /* ZXYWebNavigationBar.swift in Sources */,
 				E55A3A882595D9A100B312F3 /* LayoutConstraint+ECDesignable.swift in Sources */,
 				E564414B250A2BCA0016B464 /* HomeViewController.swift in Sources */,
 				E564414F250A2BF30016B464 /* InformationViewController.swift in Sources */,
 				E5F41887250B557F0024C6D1 /* MacroDefine.swift in Sources */,
 				E5F22450259433FC0084DD69 /* YDImageModel.swift in Sources */,
 				E5F22418259318F60084DD69 /* UIDevice-iphoneX.swift in Sources */,
+				E53868682601DFCC0060D719 /* YDOnlyWebViewController.swift in Sources */,
+				E538685F26004AF30060D719 /* ZXYLocalWebViewController.swift in Sources */,
+				E5386862260059390060D719 /* UIColor+ECColor.swift in Sources */,
 				E571434925AEFD29000D58B4 /* YDContentModel.swift in Sources */,
+				E538683B26004AF30060D719 /* ZXYWebEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

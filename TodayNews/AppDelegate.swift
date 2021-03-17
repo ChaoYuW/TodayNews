@@ -44,6 +44,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //2.定义可变：用var修饰
         var muDic = Dictionary<String,Any>()
         
+        
+        // 提前初始化缓存池
+        let _ = ZXYWebViewPool.shared
+        
+        
 //        muDic["appVersion"] = ["name":"iOS","version":app_Version]
 //        muDic["string"] = ""
 //        muDic["osVersion"] = ["name":UIDevice.current.name,"version":UIDevice.current.systemVersion]

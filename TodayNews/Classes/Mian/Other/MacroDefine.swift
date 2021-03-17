@@ -29,6 +29,9 @@ let STATUSBAR_HEIGHT = IS_IPHONEX ? CGFloat(44.0) : CGFloat(20.0)
 public let GK_SAFEAREA_TOP: CGFloat = ECConfigure.safeAreaInsets().top
 public let GK_SAFEAREA_BTM: CGFloat = ECConfigure.safeAreaInsets().bottom
 
+// 字符串定义
+let kMainControllerInitSuccessNotiKey = "kMainControllerInitSuccessNotiKey"
+
 
 
 // 是否是iPad

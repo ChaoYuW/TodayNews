@@ -39,13 +39,17 @@ class HomeViewController: YDBaseViewController {
         
         self.gk_navigationBar.addSubview(navView)
         
+        // 首页加载完成后，通知缓冲池，初始化webView，加入到reusableWebViewSet
+        NotificationCenter.default.post(name: NSNotification.Name(kMainControllerInitSuccessNotiKey), object: nil)
         
-        // Do any additional setup after loading the view.
     }
     
     
     @objc func searchClick(_ button :UIButton){
         
+        let vc = YDOnlyWebViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated:true)
     }
     @objc func scanClick(_ button :UIButton){
         
