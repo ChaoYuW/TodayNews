@@ -35,7 +35,7 @@
 		<key>GDPerformanceView-Swift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>18</integer>
 		</dict>
 		<key>GKNavigationBarSwift.xcscheme</key>
 		<dict>
@@ -47,7 +47,7 @@
 		<key>GKNavigationBarSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>17</integer>
 		</dict>
 		<key>HandyJSON.xcscheme</key>
 		<dict>
@@ -87,7 +87,7 @@
 		<key>LookinServer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>20</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>

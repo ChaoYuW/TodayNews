@@ -126,6 +126,37 @@ class YDOnlyWebViewController: YDBaseViewController,WKUIDelegate,WKNavigationDel
         tableView.dataSource = self
         return tableView
     }()
-    
+//    public func webView(_ webView: WKWebView, start urlSchemeTask: WKURLSchemeTask) {
+//            print("🚀开始加载图片\(urlSchemeTask.request.url)", Date.init().timeIntervalSince1970)
+//            
+//            if let url = urlSchemeTask.request.url {
+//                var components = URLComponents.init(string: url.absoluteString)
+//                components?.scheme = "https"
+//                if let url = components?.url {
+//                    KingfisherManager.shared.retrieveImage(with: url, options: nil, progressBlock: nil) { (image, _, _, _) in
+//                        var data: Data? = nil
+//                        if let image = image?.kf.gifRepresentation() {
+//                            data = image
+//                        }else if let image = image?.kf.pngRepresentation() {
+//                            data = image
+//                        }else if let image = image?.kf.jpegRepresentation(compressionQuality: 1) {
+//                            data = image
+//                        }
+//                        print("🚀结束加载图片\(urlSchemeTask.request.url)", Date.init().timeIntervalSince1970)
+//                        if let data = data {
+//                            let response = URLResponse.init(url: url, mimeType: nil, expectedContentLength: data.count, textEncodingName: nil)
+//                            urlSchemeTask.didReceive(response)
+//                            urlSchemeTask.didReceive(data)
+//                            urlSchemeTask.didFinish()
+//                        }else {
+//                            urlSchemeTask.didFailWithError(NSError.init(domain: "10086", code: 10086, userInfo: nil))
+//                        }
+//                    }
+//                    return
+//                }
+//            }
+//            urlSchemeTask.didFailWithError(NSError.init(domain: "10086", code: 10086, userInfo: nil))
+//        }
+
 
 }
